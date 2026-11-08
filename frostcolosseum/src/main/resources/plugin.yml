@@ -1,0 +1,25 @@
+name: FrostColosseum
+version: '${version}'
+main: com.frostsmp.colosseum.FrostColosseumPlugin
+api-version: '1.21'
+description: Red vs Blue platform queue arena fights with team glow and loot window
+authors:
+  - FrostSMP
+
+commands:
+  colo:
+    description: FrostColosseum player and admin commands
+    usage: /colo <status|wand|setregion|setspawn|setreward|admin|forcestart|forceend|reload>
+    aliases: [colosseum, frostcolo]
+  setreward:
+    description: Open the Colosseum reward editor GUI
+    usage: /setreward
+    permission: frostsmp.colo.admin
+
+permissions:
+  frostsmp.colo.use:
+    description: View Colosseum status
+    default: true
+  frostsmp.colo.admin:
+    description: Configure Colosseum regions, reward, and force matches
+    default: op

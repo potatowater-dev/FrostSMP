@@ -1,0 +1,50 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Seconds to wait after /afk before teleporting
+teleport-delay-seconds: 5
+
+# Milliseconds of AFK time in the region between key rewards
+reward-interval-ms: 1800000
+
+# FrostCrates crate id for the AFK key
+crate-id: afk
+keys-per-reward: 1
+
+# How often to refresh bossbars / region checks (ticks)
+tick-interval-ticks: 20
+
+wand:
+  material: BLAZE_ROD
+  name: "<gold>AFK Wand</gold>"
+  lore:
+    - "<gray>Left-click: set pos1</gray>"
+    - "<gray>Right-click: set pos2</gray>"
+
+bossbar:
+  color: BLUE
+  style: SOLID
+  title: "<aqua>AFK Reward</aqua> <gray>·</gray> <white>{remaining}</white>"
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /frostafk <wand|pos1|pos2|setspawn|info|reload></gray>"
+  reloaded: "<green>FrostAFK reloaded.</green>"
+  wand-given: "<green>Given AFK Wand.</green>"
+  pos1-set: "<green>AFK pos1:</green> <white>{location}</white>"
+  pos2-set: "<green>AFK pos2:</green> <white>{location}</white>"
+  spawn-set: "<green>AFK spawn:</green> <white>{location}</white>"
+  region-incomplete: "<red>AFK region is not fully set (need pos1 and pos2).</red>"
+  spawn-missing: "<red>AFK spawn is not set. Use /frostafk setspawn</red>"
+  afk-start: "<gray>Teleporting to AFK in</gray> <white>{seconds}s</white><gray>... Don't move.</gray>"
+  afk-cancelled-move: "<red>AFK teleport cancelled — you moved.</gray>"
+  afk-cancelled: "<yellow>AFK teleport cancelled.</yellow>"
+  afk-already: "<yellow>You are already teleporting to AFK.</yellow>"
+  afk-teleported: "<green>Welcome to the AFK zone.</green>"
+  reward: "<green>AFK reward:</green> <white>{amount}x {crate}</white> <green>key!</green>"
+  crates-missing: "<red>FrostCrates is not available — cannot give AFK keys.</red>"
+  info-header: "<gold>FrostAFK</gold>"
+  info-region: "<gray>Region:</gray> <white>{region}</white>"
+  info-spawn: "<gray>Spawn:</gray> <white>{spawn}</white>"
+  info-none: "<dark_gray>(not set)</dark_gray>"

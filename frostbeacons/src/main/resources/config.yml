@@ -1,0 +1,31 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# How often to refresh beams/effects (ticks). Lower = smoother beam.
+tick-interval-ticks: 5
+
+# Effect duration applied each refresh (ticks). Vanilla is 180 (9s).
+effect-duration-ticks: 180
+
+wand:
+  material: BLAZE_ROD
+  name: "<gold>Beacon Wand</gold>"
+  lore:
+    - "<gray>Left-click beacon: set beam start</gray>"
+    - "<gray>Right-click block above: set beam end</gray>"
+    - "<dark_gray>Stained glass/panes tint the beam</dark_gray>"
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  usage: "<gray>Usage: /frostbeacons <wand|list|reload></gray>"
+  players-only: "<red>Players only.</red>"
+  reloaded: "<green>FrostBeacons reloaded.</green>"
+  wand-given: "<green>Given Beacon Wand.</green>"
+  start-set: "<green>Beam start:</green> <white>{location}</white>"
+  end-set: "<green>Beam end:</green> <white>{location}</white>"
+  start-must-be-beacon: "<red>Left-click a beacon to set the beam start.</red>"
+  need-start-first: "<yellow>Left-click a beacon first, then right-click the end block.</yellow>"
+  end-same-column: "<red>End block must be directly above the beacon (same X/Z).</red>"
+  end-above-start: "<red>End block must be above the beacon.</red>"
+  list-header: "<gold>FrostBeacons beams</gold>"
+  list-empty: "<dark_gray>(none)</dark_gray>"

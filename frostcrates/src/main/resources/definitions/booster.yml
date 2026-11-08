@@ -1,0 +1,6 @@
+display-name: "<gold>Booster Crate"
+display-block: YELLOW_SHULKER_BOX
+broadcast-enabled: true
+broadcast-threshold-weight: 5
+open-cooldown-ms: 3000
+loot: []

@@ -1,0 +1,100 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+prefix: "<gray>[<aqua>FrostCrates<gray>] "
+default-no-key-message: "<red>You don't have a key for this crate!</red>"
+broadcast-format: "<gold>{player}</gold> won <yellow>{item}</yellow> from <aqua>{crate}</aqua>!"
+action-bar-no-key: true
+chat-input-timeout-seconds: 30
+claim-title-enabled: true
+warn-on-full-inventory: true
+
+hologram:
+  line1-height: 1.85
+  line2-height: 1.55
+  line3-height: 1.25
+  gradient-start: "#55FFFF"
+  gradient-end: "#FF55FF"
+  subtitle: "<gray>✦ Right-click · Sneak+right-click opens all ✦"
+  keys-format: "<gray>Your keys: <yellow>{keys}"
+  view-distance: 48
+
+claim-animation:
+  enabled: true
+  allow-skip-permission: false
+  duration-ticks: 90
+  scroll-distance: 40
+
+# Sneak + right-click opens this many keys at once (instant, no spin animation).
+claim-batch:
+  max-keys: 64
+
+sounds:
+  claim-success: ENTITY_PLAYER_LEVELUP
+  claim-denied: BLOCK_NOTE_BLOCK_BASS
+  claim-success-volume: 0.9
+  claim-success-pitch: 1.2
+  claim-denied-volume: 0.8
+  claim-denied-pitch: 0.5
+
+# Auto-key grants: periodic keys for players with a permission (LuckPerms required for offline).
+auto-key-grants:
+  check-interval-seconds: 60
+  max-catchup: 7
+  notify-online: true
+
+# Rank bundles: highest matching LuckPerms group wins (list order = lowest to highest).
+# Crate ids must match your crate definitions (resource, booster, kit).
+rank-rewards:
+  enabled: true
+  interval-hours: 24
+  ranks:
+    tide:
+      display: "Tide"
+      group: tide
+      keys:
+        resource: 1
+        booster: 1
+    riptide:
+      display: "Riptide"
+      group: riptide
+      keys:
+        kit: 1
+        booster: 2
+        resource: 1
+    tempest:
+      display: "Tempest"
+      group: tempest
+      keys:
+        kit: 2
+        booster: 3
+        resource: 3
+    apex:
+      display: "Apex"
+      group: apex
+      keys:
+        kit: 4
+        booster: 6
+        resource: 5
+
+# Discord server boost rewards (highest matching tier wins).
+boost-rewards:
+  enabled: true
+  interval-hours: 24
+  tiers:
+    boost1:
+      display: "1 Boost"
+      permission: frostsmp.crates.boost.1
+      keys:
+        booster: 1
+    boost3:
+      display: "3 Boosts"
+      permission: frostsmp.crates.boost.3
+      keys:
+        booster: 2
+    boost6:
+      display: "6 Boosts"
+      permission: frostsmp.crates.boost.6
+      keys:
+        booster: 3
+        kit: 1

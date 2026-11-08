@@ -1,0 +1,20 @@
+name: FrostRestart
+version: '${version}'
+main: com.frostsmp.restart.FrostRestartPlugin
+api-version: '1.21'
+description: Scheduled server restart with combat-log grace near shutdown
+authors:
+  - FrostSMP
+softdepend:
+  - FrostCombat
+
+commands:
+  frostrestart:
+    description: Schedule or manage server restarts
+    usage: /frostrestart <start [minutes]|now|cancel|status>
+    aliases: [restart]
+
+permissions:
+  frostsmp.restart.admin:
+    description: Schedule and cancel server restarts
+    default: op

@@ -1,0 +1,18 @@
+name: FrostBeacons
+version: '${version}'
+main: com.frostsmp.beacons.FrostBeaconsPlugin
+api-version: '1.21'
+description: Beacons work without clear sky; wand configures pass-through and stop blocks
+authors:
+  - FrostSMP
+
+commands:
+  frostbeacons:
+    description: FrostBeacons admin commands
+    usage: /frostbeacons <wand|list|reload>
+    aliases: [fbeacons]
+
+permissions:
+  frostsmp.beacons.admin:
+    description: Manage FrostBeacons wand and settings
+    default: op

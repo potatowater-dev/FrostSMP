@@ -1,0 +1,32 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Default event length when /frostevent start has no hours argument
+default-hours: 6
+
+# How often to strip locator-bar hide modifiers (ticks)
+locator-tick-interval: 10
+
+# Spawn protection after join/respawn/event start (seconds). Ends early if they hit someone.
+spawn-protection-seconds: 300
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  usage: "<gray>Usage: /frostevent <start [hours]|stop|status|winner|kills [player]></gray>"
+  already-running: "<red>An event is already running.</red>"
+  not-running: "<gray>No event is running.</gray>"
+  started: "<gold>Event started</gold> <gray>for</gray> <white>{hours}h</white><gray>. Locator bar forced on. Naked players are protected.</gray>"
+  stopped: "<gold>Event ended.</gold> <gray>Winner:</gray> <white>{winner}</white> <gray>(</gray><white>{kills}</white> <gray>kills)</gray>"
+  stopped-no-kills: "<gold>Event ended.</gold> <gray>No kills were recorded.</gray>"
+  status-running: "<gray>Event active ·</gray> <white>{remaining}</white> <gray>left · kills tracked:</gray> <white>{players}</white>"
+  status-idle: "<gray>No event is running.</gray>"
+  winner: "<gold>Last winner:</gold> <white>{winner}</white> <gray>·</gray> <white>{kills}</white> <gray>kills ·</gray> <dark_gray>{when}</dark_gray>"
+  winner-none: "<gray>No winner saved yet.</gray>"
+  kills-self: "<gray>Your kills:</gray> <white>{kills}</white>"
+  kills-other: "<gray>Kills for</gray> <white>{player}</white><gray>:</gray> <white>{kills}</white>"
+  kills-none: "<gray>No kills recorded for that player.</gray>"
+  naked-blocked-attacker: "<red>You can't kill a naked player during the event.</red>"
+  naked-blocked-victim: "<yellow>A player tried to kill you while you were naked (protected).</yellow>"
+  spawn-protection-granted: "<green>Spawn protection:</green> <white>{seconds}s</white> <gray>(ends if you hit someone)</gray>"
+  spawn-protection-ended: "<yellow>Spawn protection ended.</yellow>"
+  spawn-protection-blocked-attacker: "<red>That player has spawn protection.</red>"

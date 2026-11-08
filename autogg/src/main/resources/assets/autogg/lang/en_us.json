@@ -1,0 +1,63 @@
+{
+  "key.autogg.quick_msg": "Quick Message",
+  "key.category.autogg.main": "AutoGG",
+
+  "text.autoconfig.autogg.title": "AutoGG",
+  "text.autoconfig.autogg.category.command": "Command",
+  "text.autoconfig.autogg.category.targeting": "Targeting",
+  "text.autoconfig.autogg.category.antispam": "Anti-spam",
+  "text.autoconfig.autogg.category.feedback": "Feedback",
+
+  "text.autoconfig.autogg.option.commandTemplate": "Command template",
+  "text.autoconfig.autogg.option.commandTemplate.@Tooltip[0]": "Full command to run. Must include {player}. Placeholders:",
+  "text.autoconfig.autogg.option.commandTemplate.@Tooltip[1]": "{player} = target username (last you hit, else last who hit you)",
+  "text.autoconfig.autogg.option.commandTemplate.@Tooltip[2]": "{message} = message text below",
+  "text.autoconfig.autogg.option.commandTemplate.@Tooltip[3]": "{uuid} = target UUID",
+  "text.autoconfig.autogg.option.commandTemplate.@Tooltip[4]": "Examples: /msg {player} {message}  |  /tell {player} gf",
+
+  "text.autoconfig.autogg.option.message": "Message text",
+  "text.autoconfig.autogg.option.message.@Tooltip": "Inserted where {message} appears in the template",
+
+  "text.autoconfig.autogg.option.sendMode": "Send mode",
+  "text.autoconfig.autogg.option.sendMode.@Tooltip[0]": "COMMAND = command packet (recommended)",
+  "text.autoconfig.autogg.option.sendMode.@Tooltip[1]": "CHAT = typed chat starting with /",
+
+  "text.autoconfig.autogg.option.hitMemorySeconds": "Remember combat target (seconds)",
+  "text.autoconfig.autogg.option.hitMemorySeconds.@Tooltip[0]": "Applies to both last player you hit and last who hit you.",
+  "text.autoconfig.autogg.option.hitMemorySeconds.@Tooltip[1]": "0 = remember until you leave the server",
+
+  "text.autoconfig.autogg.option.maxDistance": "Max distance (blocks)",
+  "text.autoconfig.autogg.option.maxDistance.@Tooltip": "0 = no distance check. Only if the player is still loaded.",
+
+  "text.autoconfig.autogg.option.requirePlayerOnline": "Require target still online/loaded",
+  "text.autoconfig.autogg.option.requirePlayerOnline.@Tooltip": "If on, skips send when the target player is gone or dead",
+
+  "text.autoconfig.autogg.option.allowLastAttackerFallback": "Use last attacker as fallback",
+  "text.autoconfig.autogg.option.allowLastAttackerFallback.@Tooltip[0]": "Prefer the last player you hit.",
+  "text.autoconfig.autogg.option.allowLastAttackerFallback.@Tooltip[1]": "If none, use the last player who hit you.",
+
+  "text.autoconfig.autogg.option.spearLateralMax": "Spear lateral max (blocks)",
+  "text.autoconfig.autogg.option.spearLateralMax.@Tooltip": "How far beside the look ray a spear near-miss can still count. Default 1.0.",
+
+  "text.autoconfig.autogg.option.antiSpamEnabled": "Enable anti-spam",
+  "text.autoconfig.autogg.option.antiSpamEnabled.@Tooltip": "Blocks keybind spam with a cooldown between successful sends",
+
+  "text.autoconfig.autogg.option.cooldownSeconds": "Cooldown (seconds)",
+  "text.autoconfig.autogg.option.cooldownSeconds.@Tooltip[0]": "Minimum wait between successful AutoGG sends.",
+  "text.autoconfig.autogg.option.cooldownSeconds.@Tooltip[1]": "Clamped to 0–60. Default 3.",
+
+  "text.autoconfig.autogg.option.maxSendsPerHit": "Max sends per hit",
+  "text.autoconfig.autogg.option.maxSendsPerHit.@Tooltip[0]": "How many times you can message the same engagement before needing a new hit.",
+  "text.autoconfig.autogg.option.maxSendsPerHit.@Tooltip[1]": "0 = unlimited. Default 1.",
+
+  "text.autoconfig.autogg.option.feedbackEnabled": "Show action bar feedback",
+
+  "autogg.feedback.sent": "Sent → %s",
+  "autogg.feedback.none": "No recent combat target (hit someone or get hit first)",
+  "autogg.feedback.too_far": "Target player is too far away",
+  "autogg.feedback.offline": "Target player is not loaded",
+  "autogg.feedback.bad_command": "Command template is empty",
+  "autogg.feedback.bad_template": "Command template must include {player}",
+  "autogg.feedback.cooldown": "Wait %s more second(s)",
+  "autogg.feedback.already_sent": "Already messaged this target — hit again first"
+}

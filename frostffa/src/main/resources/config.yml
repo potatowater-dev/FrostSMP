@@ -1,0 +1,110 @@
+arena:
+  world: world
+  region: ffa
+
+kits:
+  clear-inventory: true
+  give-on-join: true
+  give-on-respawn: true
+
+mutators:
+  duration-minutes:
+    min: 30
+    max: 40
+  blocked-after:
+    fog_of_war:
+      - random_effects
+  shrinking-border:
+    final-size-blocks: 48
+    shrink-minutes: 15
+    # Vanilla-style: a few blocks of buffer, then light damage (not instakill)
+    damage-per-second: 0.2
+    damage-buffer-blocks: 5
+    warning-distance: 5
+  fog-of-war:
+    stage-minutes: 10
+    stage-titles:
+      1:
+        title: "<dark_gray>FOG OF WAR</dark_gray>"
+        subtitle: "<white>Darkness I</white>"
+      2:
+        title: "<dark_gray>FOG OF WAR</dark_gray>"
+        subtitle: "<white>Darkness II</white>"
+      3:
+        title: "<dark_gray>FOG OF WAR</dark_gray>"
+        subtitle: "<white>Darkness III</white>"
+  strength-iii:
+    amplifier: 2
+  random-effects:
+    interval-seconds: 600
+    duration-seconds: 600
+  blackout:
+    hidden-name: " "
+    # Everyone is forced onto this player's Mojang-signed skin during Blackout.
+    skin-player: OperatorExit9
+  mace-roulette:
+    double-jump-cooldown-seconds: 5
+    double-jump-strength: 0.72
+    afk-seconds: 10
+    kill-tokens: 3
+
+schedule:
+  timezone: UTC
+  slots:
+    - type: mutator
+      time: "14:00"
+    - type: mutator
+      time: "22:00"
+
+titles:
+  fade-in-ticks: 10
+  stay-ticks: 50
+  fade-out-ticks: 15
+  shrinking_border:
+    title: "<gold>SHRINKING BORDER</gold>"
+    subtitle: "<gray>The world is closing in...</gray>"
+  fog_of_war:
+    title: "<dark_gray>FOG OF WAR</dark_gray>"
+    subtitle: "<white>Darkness I</white>"
+  uhc:
+    title: "<red>UHC</red>"
+    subtitle: "<gray>Natural regeneration is disabled.</gray>"
+  strength_iii:
+    title: "<dark_red>STRENGTH III</dark_red>"
+    subtitle: "<gray>Everyone hits harder.</gray>"
+  random_effects:
+    title: "<light_purple>RANDOM EFFECTS</light_purple>"
+    subtitle: "<gray>A new potion every 10 minutes.</gray>"
+  blackout:
+    title: "<black>BLACKOUT</black>"
+    subtitle: "<gray>Identities are hidden.</gray>"
+  mace_roulette:
+    title: "<gold>MACE ROULETTE</gold>"
+    subtitle: "<gray>One player holds the mace + double jump. Kill them to take it.</gray>"
+
+messages:
+  prefix: "<gold>FrostFFA</gold> <dark_gray>·</dark_gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /ffa <kit|mutator|schedule|reload></gray>"
+  reloaded: "<green>FrostFFA reloaded.</green>"
+  kit-given: "<green>Kit applied.</green> <gray>({kit})</gray>"
+  region-missing: "<red>Arena WorldGuard region '{region}' was not found in world '{world}'.</red>"
+  mutator-unknown: "<red>Unknown mutator:</red> <white>{id}</white>"
+  mutator-started: "<gold>{name}</gold> <gray>is live for {minutes}m.</gray>"
+  mutator-ended: "<gray>Mutator ended.</gray> <white>{name}</white>"
+  mutator-already: "<red>A mutator is already running.</red>"
+  mutator-none: "<gray>No mutator is active.</gray>"
+  mutator-list: "<gray>Mutators:</gray> <white>{list}</white>"
+  random-effect: "<light_purple>Random effect:</light_purple> <white>{effect}</white>"
+  schedule-line: "<gray>{time}</gray> <dark_gray>·</dark_gray> <white>{type}</white>"
+  kill: "<white>{killer}</white> <gray>killed</gray> <white>{victim}</white>"
+  mace-roulette-holder: "<gold>Mace Roulette:</gold> <white>{player}</white> <gray>holds the mace.</gray>"
+  mace-roulette-taken: "<gold>Mace Roulette:</gold> <white>{killer}</white> <gray>killed</gray> <white>{victim}</white> <gray>and took the mace.</gray>"
+  mace-roulette-passed: "<gold>Mace Roulette:</gold> <white>{killer}</white> <gray>killed</gray> <white>{victim}</white> <gray>but their inventory was full.</gray> <white>{player}</white> <gray>now holds the mace.</gray>"
+  mace-roulette-you-title: "<gold>MACE ROULETTE</gold>"
+  mace-roulette-you-subtitle: "<white>You are the mace holder.</white>"
+  mace-roulette-no-echest: "<red>You cannot use an ender chest while holding the roulette mace.</red>"
+  mace-roulette-afk: "<gold>Mace Roulette:</gold> <white>{player}</white> <gray>was AFK — passing the mace.</gray>"
+  mace-roulette-double-jump-ready: "<white>DJ</white> <green>READY</green>"
+  mace-roulette-double-jump-cooldown: "<gray>DJ</gray>"

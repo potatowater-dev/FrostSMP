@@ -1,0 +1,21 @@
+name: FrostEvent
+version: '${version}'
+main: com.frostsmp.event.FrostEventPlugin
+api-version: '1.21'
+description: Timed PvP event with naked-kill rules, locator bar, and kill winners
+authors:
+  - FrostSMP
+
+commands:
+  frostevent:
+    description: Manage the FrostSMP PvP event
+    usage: /frostevent <start [hours]|stop|status|winner|kills [player]>
+    aliases: [fevent, manhunt]
+
+permissions:
+  frostsmp.event.admin:
+    description: Start/stop FrostEvent
+    default: op
+  frostsmp.event.winner:
+    description: View event winner and kills
+    default: true

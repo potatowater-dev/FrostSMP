@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.frostsmp.autogg.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientPlayerInteractionManagerMixin",
+    "PiercingWeaponComponentMixin",
+    "KineticWeaponComponentMixin",
+    "LivingEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

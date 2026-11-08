@@ -1,0 +1,59 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+snapshot-expiry-seconds: 120
+
+debug-tags: false
+
+# Used only for messages that contain FrostChat tags ([wallet], [item], [ec], [inv], ...).
+# Normal chat (no tags) still goes through LPC unchanged.
+#
+# chat-format-legacy-safe: true (default) → tagged chat uses lpc-fallback-format below
+#   and IGNORES chat-format (so LP § prefixes stay correct).
+# Set chat-format-legacy-safe: false to use the MiniMessage chat-format template instead.
+chat-format-legacy-safe: true
+chat-format: "{prefix}<white>{name}</white><dark_gray>:</dark_gray> "
+lpc-fallback-format: "%luckperms_prefix%{name}&7: &f"
+
+stats:
+  title: "<aqua>{player}</aqua><dark_gray>'s Stats</dark_gray>"
+  unavailable: "N/A"
+  head-name: "<aqua><bold>{player}</bold></aqua>"
+  head-lore-1: "<dark_gray>FrostSMP profile</dark_gray>"
+  head-lore-kd: "<gray>K/D:</gray> <white>{kd}</white>"
+  wealth-name: "<gold><bold>Wealth</bold></gold>"
+  wealth-lore: "<gray>Balance:</gray> <white>{value}</white>"
+  wealth-hint: "<dark_gray>FrostWallet total</dark_gray>"
+  kills-name: "<aqua><bold>Kills</bold></aqua>"
+  kills-lore: "<gray>Total:</gray> <white>{value}</white>"
+  streak-name: "<red><bold>Killstreak</bold></red>"
+  streak-lore-current: "<gray>Current:</gray> <white>{value}</white>"
+  streak-lore-best: "<gray>Best:</gray> <white>{value}</white>"
+  deaths-name: "<dark_gray><bold>Deaths</bold></dark_gray>"
+  deaths-lore: "<gray>Total:</gray> <white>{value}</white>"
+  playtime-name: "<green><bold>Playtime</bold></green>"
+  playtime-lore: "<gray>Time:</gray> <white>{value}</white>"
+
+messages:
+  prefix: "<gold>Chat</gold> <dark_gray>·</dark_gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /frostchat <reload|test></gray>"
+  reloaded: "<green>FrostChat reloaded.</green>"
+  invalid-snapshot: "<red>That preview expired.</red>"
+  stats-not-found: "<red>Player <white>{player}</white> not found.</red>"
+  stats-others-denied: "<red>You can't view other players' stats.</red>"
+  wallet-label: "<gold><underlined>[Wallet]</underlined></gold>"
+  wallet-missing: "<gray>FrostWallet not installed.</gray>"
+  wallet-empty: "<gray>No wallet balance.</gray>"
+  wallet-header: "<gold>{player}'s wallet</gold>"
+  wallet-line: "<gray>{currency}:</gray> <white>{balance}</white>"
+  wallet-click: "<gray>Click to open wallet GUI</gray>"
+  wallet-gui-title: "<gold>{player}'s Wallet</gold>"
+  item-label: "<aqua><underlined>[Item]</underlined></aqua>"
+  item-empty: "<gray>Empty hand</gray>"
+  item-hover-prefix: "<gray>Showing</gray> <white>{player}</white><gray>'s held item</gray>"
+  ec-label: "<light_purple><underlined>[Ender Chest]</underlined></light_purple>"
+  ec-hover: "<gray>Click to view</gray> <white>{player}</white><gray>'s ender chest</gray>"
+  inv-label: "<green><underlined>[Inventory]</underlined></green>"
+  inv-hover: "<gray>Click to view</gray> <white>{player}</white><gray>'s inventory</gray>"

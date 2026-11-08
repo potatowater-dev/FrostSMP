@@ -1,0 +1,21 @@
+name: FrostJuggernaut
+version: '${version}'
+main: com.frostsmp.juggernaut.FrostJuggernautPlugin
+api-version: '1.21'
+description: Spawn juggernaut event with damage race
+authors:
+  - FrostSMP
+
+commands:
+  juggernaut:
+    description: Juggernaut event admin
+    usage: /juggernaut <manage|top|status|stop|reload>
+    aliases: [jug]
+
+permissions:
+  frostsmp.juggernaut.admin:
+    description: Manage juggernaut events
+    default: op
+  frostsmp.juggernaut.top:
+    description: View the damage leaderboard
+    default: true

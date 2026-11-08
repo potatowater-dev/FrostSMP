@@ -1,0 +1,30 @@
+name: FrostCombat
+version: '${version}'
+main: com.frostsmp.combat.FrostCombatPlugin
+api-version: '1.21'
+description: Combat tagging with command lock, animated action bar, and combat-log punishment
+authors:
+  - FrostSMP
+
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  frostcombat:
+    description: FrostCombat admin commands
+    usage: /frostcombat <reload|untag [player]|resetstats>
+    permission: frostsmp.combat.admin
+  spawn:
+    description: Teleport to world spawn after a short delay
+    usage: /spawn
+
+permissions:
+  frostsmp.combat.bypass:
+    description: Bypass combat restrictions and combat-log penalty
+    default: false
+  frostsmp.combat.admin:
+    description: FrostCombat admin commands (reload, untag, resetstats)
+    default: op
+  frostsmp.spawn.use:
+    description: Use /spawn
+    default: true

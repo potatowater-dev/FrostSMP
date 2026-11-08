@@ -1,0 +1,61 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Each effect has its own claim item. Use either:
+#   item: 'minecraft:paper[custom_name=...]'   (FrostWallet-style give-string)
+# or /killeffect setitem <id> while holding the item (saved as item-data).
+# Claim items are tagged internally so right-click claim is reliable (no snowball throw / TNT place races).
+# Prefer non-throwable materials when possible.
+effects:
+  lightning:
+    name: Lightning
+    permission: frostsmp.killeffect.claim.lightning
+    item: 'minecraft:lightning_rod[custom_name={"text":"Lightning Kill Effect","italic":false,"color":"aqua","bold":true}]'
+  explosion:
+    name: Explosion
+    permission: frostsmp.killeffect.claim.explosion
+    item: 'minecraft:tnt[custom_name={"text":"Explosion Kill Effect","italic":false,"color":"red","bold":true}]'
+  blood:
+    name: Blood
+    permission: frostsmp.killeffect.claim.blood
+    # spider_eye — dyes (red_dye) client-predict consumption and can dupe on cancel
+    item: 'minecraft:spider_eye[custom_name={"text":"Blood Kill Effect","italic":false,"color":"dark_red","bold":true}]'
+  frost:
+    name: Frost
+    permission: frostsmp.killeffect.claim.frost
+    item: 'minecraft:prismarine_crystals[custom_name={"text":"Frost Kill Effect","italic":false,"color":"white","bold":true}]'
+  flame:
+    name: Flame
+    permission: frostsmp.killeffect.claim.flame
+    item: 'minecraft:blaze_powder[custom_name={"text":"Flame Kill Effect","italic":false,"color":"gold","bold":true}]'
+
+messages:
+  prefix: "<red>KillEffect</red> <dark_gray>·</dark_gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /killeffect [select|list|give|setitem|reload|clear]</gray>"
+  reloaded: "<green>FrostKillEffects reloaded.</green>"
+  unknown-effect: "<red>Unknown effect:</red> <white>{effect}</white>"
+  player-offline: "<red>Player is offline.</red>"
+  empty-hand: "<red>Hold an item to set.</red>"
+  given: "<green>Gave</green> <white>{amount}x</white> <aqua>{effect}</aqua> <green>to</green> <white>{player}</white><green>.</green>"
+  setitem: "<green>Claim item for</green> <aqua>{effect}</aqua> <green>set from your hand.</green>"
+  claimed: "<green>Claimed</green> <aqua>{effect}</aqua><green>.</green>"
+  already-claimed: "<gray>You already own</gray> <aqua>{effect}</aqua><gray>.</gray>"
+  cannot-claim: "<red>You cannot claim this kill effect.</red>"
+  selected: "<green>Selected kill effect:</green> <aqua>{effect}</aqua>"
+  not-owned: "<red>You have not claimed</red> <aqua>{effect}</aqua><red>.</red>"
+  cleared: "<gray>Kill effect cleared.</gray>"
+  list-header: "<gold>Your kill effects</gold>"
+  list-line: "<gray>-</gray> <white>{effect}</white> {selected}"
+  list-empty: "<gray>You have no claimed kill effects.</gray>"
+  list-selected: "<green>(selected)</green>"
+  none-selected: "<gray>None selected. Use /killeffect select</gray>"
+  gui-title: "<dark_red>Kill Effects</dark_red>"
+  gui-locked: "<gray>Not claimed</gray>"
+  gui-selected: "<green>Selected</green>"
+  gui-click-select: "<yellow>Click to select</yellow>"
+  gui-clear-name: "<red>Clear</red>"
+  gui-clear-click: "<gray>Click to clear your kill effect</gray>"
+  gui-clear-active: "<dark_gray>Already cleared</dark_gray>"
+  gui-not-owned: "<red>You have not claimed this effect.</red>"

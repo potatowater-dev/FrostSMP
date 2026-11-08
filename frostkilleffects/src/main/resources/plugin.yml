@@ -1,0 +1,39 @@
+name: FrostKillEffects
+version: '${version}'
+main: com.frostsmp.killeffect.FrostKillEffectsPlugin
+api-version: '1.21'
+description: Claimable particle kill effects
+authors:
+  - FrostSMP
+
+commands:
+  killeffect:
+    description: Manage kill effects
+    usage: /killeffect [select|list|give|setitem|reload|clear] ...
+    aliases: [ke, killeffects, frostkilleffect]
+
+permissions:
+  frostsmp.killeffect.use:
+    description: Select and use claimed kill effects
+    default: true
+  frostsmp.killeffect.admin:
+    description: Give, setitem, and reload kill effects
+    default: op
+  frostsmp.killeffect.claim.*:
+    description: Claim any kill effect item
+    default: false
+  frostsmp.killeffect.claim.lightning:
+    description: Claim the lightning kill effect
+    default: false
+  frostsmp.killeffect.claim.explosion:
+    description: Claim the explosion kill effect
+    default: false
+  frostsmp.killeffect.claim.blood:
+    description: Claim the blood kill effect
+    default: false
+  frostsmp.killeffect.claim.frost:
+    description: Claim the frost kill effect
+    default: false
+  frostsmp.killeffect.claim.flame:
+    description: Claim the flame kill effect
+    default: false

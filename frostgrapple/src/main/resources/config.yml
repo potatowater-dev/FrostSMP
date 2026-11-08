@@ -1,0 +1,49 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Pull force when you reel in. 1.0 matches the classic GrapplingHook feel.
+strength: 1.25
+
+# Hook throw velocity multiplier when you cast.
+speed: 1.5
+
+# Maximum pull distance in blocks. Casts farther than this will not pull.
+range: 48.0
+
+# Seconds between successful pulls. Only blocks pulling, not throwing. 0 disables cooldown.
+cooldown-seconds: 2
+
+# How cooldown is shown. actionbar is often overwritten by FrostCombat — bossbar stays visible.
+cooldown-display: both
+# Options: actionbar | bossbar | both
+
+# Extra upward kick applied at the start of a pull so you can scale ledges.
+vertical-boost: 0.3
+
+# If false, fall damage is cancelled for a few seconds after a pull.
+fall-damage: false
+fall-protection-ticks: 100
+
+# Empty list means all worlds.
+enabled-worlds: []
+
+item:
+  name: "<gold><bold>Grappling Hook</bold></gold>"
+  lore:
+    - "<gray>Right-click to throw the hook.</gray>"
+    - "<gray>Reel in to pull yourself toward it.</gray>"
+  unbreakable: true
+
+messages:
+  prefix: "<gold>Grapple</gold> <dark_gray>·</dark_gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /grapple <give [player] [amount]|reload></gray>"
+  reloaded: "<green>FrostGrapple reloaded.</green>"
+  given: "<green>Gave</green> <white>{amount}x</white> <gold>Grappling Hook</gold> <green>to</green> <white>{player}</white><green>.</green>"
+  player-offline: "<red>Player is offline.</red>"
+  cooldown-actionbar: "<gold>Grapple</gold> <dark_gray>·</dark_gray> {bar} <white>{seconds}s</white>"
+  cooldown-bossbar: "<gold>Grapple</gold> <gray>cooldown</gray> <white>{seconds}s</white>"
+  cooldown-ready: "<green>Grapple ready</green>"
+  too-far: "<red>Too far.</red> <gray>Max range is</gray> <white>{range}</white> <gray>blocks.</gray>"
+  no-use: "<red>You cannot use grappling hooks.</red>"

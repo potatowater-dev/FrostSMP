@@ -1,0 +1,82 @@
+prefix: "<gray>[<aqua>FrostPlots<gray>] "
+
+plot-world: plots
+grid-spacing: 200
+platform-y: 64
+max-members: 16
+list-page-size: 8
+delete-confirm-seconds: 15
+region-height: 80
+# If false, nobody can walk off a plot — not even ops or players with '*'.
+# Teleports like /plot home, /plot visit, and /tp still work.
+allow-boundary-bypass: false
+
+upgrade-tiers:
+  - size: 10
+    cost-amount: 0
+    cost-item: ""
+  - size: 20
+    cost-amount: 10
+    cost-item: ""
+  - size: 40
+    cost-amount: 50
+    cost-item: ""
+
+messages:
+  players-only: "<red>Players only.</red>"
+  no-permission: "<red>You don't have permission.</red>"
+  world-missing: "<red>The plot world is not loaded. Ask an admin to create world <white>{world}</white>.</red>"
+  cost-item-missing: "<red>This upgrade has no cost item set. An admin must hold the item and run <white>/plot setcost</white>.</red>"
+  empty-hand: "<red>Hold the cost item, then run <white>/plot setcost 2 10</white>.</red>"
+  invalid-tier: "<red>That upgrade tier does not exist.</red>"
+  invalid-amount: "<red>Amount must be 0 or greater.</red>"
+  usage-setcost: "<gray>Usage: <white>/plot setcost 2 10</white> while holding the item. Tier is 1-based.</gray>"
+  cost-set: "<green>Tier <white>{tier}</white> now costs <white>{cost}</white>.</green>"
+  already-owns: "<red>You already own a plot. Use <white>/plot home</white>.</red>"
+  creating: "<gray>Finding a free plot slot...</gray>"
+  created: "<green>Plot <white>#{id}</white> created. Welcome home.</green>"
+  create-failed: "<red>Could not create your plot. Check console.</red>"
+  no-plot: "<red>You don't own a plot.</red>"
+  plot-missing: "<red>That plot doesn't exist.</red>"
+  not-on-plot: "<red>You are not standing on a plot.</red>"
+  not-owner: "<red>Only the plot owner can do that.</red>"
+  not-trusted: "<red>You don't have permission to do that on this plot.</red>"
+  player-not-found: "<red>Player <white>{player}</white> was not found.</red>"
+  cannot-target-self: "<red>You can't do that to yourself.</red>"
+  cannot-target-owner: "<red>You can't change the plot owner that way.</red>"
+  max-members: "<red>This plot already has the maximum of <white>{max}</white> members.</red>"
+  already-member: "<red>{player} is already on this plot.</red>"
+  not-member: "<red>{player} is not a member of this plot.</red>"
+  added: "<green>Added <white>{player}</white> as <white>{role}</white>.</green>"
+  added-target: "<gray>You were added to <white>{owner}</white>'s plot as <white>{role}</white>.</gray>"
+  removed: "<green>Removed <white>{player}</white> from the plot.</green>"
+  removed-target: "<gray>You were removed from <white>{owner}</white>'s plot.</gray>"
+  promoted: "<green>Set <white>{player}</white> to <white>{role}</white>.</green>"
+  promoted-target: "<gray>Your role on <white>{owner}</white>'s plot is now <white>{role}</white>.</gray>"
+  usage-promote: "<gray>Usage: <white>/plot promote \\<player\\> MEMBER</white> (or VISITOR / CO_OWNER)</gray>"
+  co-owner-restricted: "<red>Co-owners can't do that.</red>"
+  privacy-public: "<green>Plot is now <white>PUBLIC</white>.</green>"
+  privacy-private: "<green>Plot is now <white>PRIVATE</white>. Non-members were sent away.</green>"
+  spawn-set: "<green>Plot spawn updated.</green>"
+  spawn-off-plot: "<red>Stand on your plot to set its spawn.</red>"
+  teleported-home: "<gray>Welcome home.</gray>"
+  teleported-visit: "<gray>Visiting <white>{owner}</white>'s plot.</gray>"
+  visit-private: "<red>That plot is private.</red>"
+  visit-no-plot: "<red>{player} doesn't own a plot.</red>"
+  info-header: "<aqua>Plot #{id}</aqua> <gray>•</gray> <white>{owner}</white>"
+  info-body: "<gray>Privacy:</gray> {privacy} <gray>•</gray> <gray>Tier:</gray> {tier} <gray>•</gray> <gray>Size:</gray> {size}x{size}"
+  info-members: "<gray>Members:</gray> {members}"
+  list-header: "<aqua>Plots</aqua> <gray>(page {page}/{pages})</gray>"
+  list-entry: "<gray>#{id}</gray> <white>{owner}</white> <gray>•</gray> {privacy} <gray>•</gray> {size}x{size}"
+  list-empty: "<gray>No plots to show.</gray>"
+  list-page: "<red>That page doesn't exist.</red>"
+  delete-prompt: "<yellow>Type <white>/plot delete confirm</white> within {seconds}s to permanently delete your plot.</yellow>"
+  delete-no-pending: "<red>Nothing to confirm. Run <white>/plot delete</white> first.</red>"
+  deleted: "<green>Plot #{id} deleted.</green>"
+  max-tier: "<red>This plot is already at the maximum tier.</red>"
+  cannot-afford: "<red>You need <white>{cost}</white> in your inventory to upgrade.</red>"
+  upgraded: "<green>Plot upgraded to tier <white>{tier}</white> ({size}x{size}).</green>"
+  upgrade-failed: "<red>Upgrade failed.</red>"
+  base-protected: "<red>The plot floor cannot be mined.</red>"
+  cannot-leave: "<red>You can't leave this plot.</red>"
+  usage: "<gray>/plot <white>create</white> | home | visit <player> | public | private | setspawn | add | remove | promote | upgrade | info | list | delete | setcost</gray>"

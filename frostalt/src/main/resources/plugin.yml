@@ -1,0 +1,26 @@
+name: FrostAlt
+version: '${version}'
+main: com.frostsmp.alt.FrostAltPlugin
+api-version: '1.21'
+description: Same-IP alt detection with playtime-based flagging and in-game appeals
+authors:
+  - FrostSMP
+
+commands:
+  appeal:
+    description: Submit an alt-detection appeal
+    usage: /appeal <reason>
+  frostalt:
+    description: FrostAlt admin commands
+    usage: /frostalt <cases|case|approve|deny|reload>
+
+permissions:
+  frostsmp.alt.bypass:
+    description: Bypass alt detection
+    default: op
+  frostsmp.alt.admin:
+    description: FrostAlt admin commands
+    default: op
+  frostsmp.alt.appeal:
+    description: Submit appeals when flagged
+    default: true

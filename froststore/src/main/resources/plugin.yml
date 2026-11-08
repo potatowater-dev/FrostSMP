@@ -1,0 +1,20 @@
+name: FrostStore
+version: '${version}'
+main: com.frostsmp.store.FrostStorePlugin
+api-version: '1.21'
+description: Polls Stripe rank purchases and grants LuckPerms groups
+authors:
+  - FrostSMP
+softdepend:
+  - LuckPerms
+
+commands:
+  froststore:
+    description: Reload FrostStore
+    usage: /froststore reload
+    permission: frostsmp.store.admin
+
+permissions:
+  frostsmp.store.admin:
+    description: Reload FrostStore
+    default: op

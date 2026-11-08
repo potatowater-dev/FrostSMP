@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frost FFA — DSMP-style Minecraft PvP. Mutators, kits, killstreaks. Join at frostffa.xyz">
+  <meta name="theme-color" content="#0b1628">
+  <meta property="og:title" content="Frost FFA">
+  <meta property="og:description" content="Ice-cold FFA PvP. Join frostffa.xyz">
+  <meta property="og:type" content="website">
+  <title>Frost FFA — Minecraft PvP</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">
+      <span class="logo-block"></span>
+      <span>Frost<span class="accent">FFA</span></span>
+    </a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#mutators">Mutators</a>
+      <a href="#store">Store</a>
+      <a href="#join">Join</a>
+      <a class="nav-discord" href="https://discord.gg/playfrost" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Minecraft 1.21 · FFA PvP</p>
+        <h1>
+          <span class="title-line">Welcome to</span>
+          <span class="title-main">Frost FFA</span>
+        </h1>
+        <p class="hero-sub">
+          Drop in with a diamond kit, fight for killstreaks, and survive
+          <strong>map-wide mutators</strong> that rewrite the arena every match.
+        </p>
+
+        <div class="ip-card" id="join">
+          <div class="ip-card-inner">
+            <span class="ip-label">Server IP</span>
+            <div class="ip-row">
+              <code id="server-ip">frostffa.xyz</code>
+              <button class="btn-copy" type="button" id="copy-ip" aria-label="Copy server IP">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <p class="ip-hint">Java Edition · Add to multiplayer</p>
+          </div>
+          <div class="ip-status">
+            <span class="status-dot"></span>
+            <span>Online</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="minecraft://?addExternalServer=Frost%20FFA|frostffa.xyz">
+            Launch Minecraft
+          </a>
+          <a class="btn btn-discord" href="https://discord.gg/playfrost" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            discord.gg/playfrost
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="block-stack">
+          <div class="mc-block block-grass"></div>
+          <div class="mc-block block-ice"></div>
+          <div class="mc-block block-diamond"></div>
+          <div class="mc-block block-obsidian"></div>
+        </div>
+        <div class="floating-items">
+          <span class="item sword">⚔</span>
+          <span class="item snowflake">❄</span>
+          <span class="item star">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-bar reveal">
+      <div class="stat reveal reveal-delay-1">
+        <span class="stat-value">1.21</span>
+        <span class="stat-label">Version</span>
+      </div>
+      <div class="stat reveal reveal-delay-2">
+        <span class="stat-value">FFA</span>
+        <span class="stat-label">Game mode</span>
+      </div>
+      <div class="stat reveal reveal-delay-3">
+        <span class="stat-value">Live</span>
+        <span class="stat-label">Mutators</span>
+      </div>
+      <div class="stat reveal reveal-delay-4">
+        <span class="stat-value">KS</span>
+        <span class="stat-label">Killstreaks</span>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head reveal">
+        <h2>Built for chaos</h2>
+        <p>Spawn geared, fight instantly, climb the boards.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon diamond">◆</div>
+          <h3>Diamond kits</h3>
+          <p>Full SMP-tier loadout on join. Booster and rank perks stack small advantages — not pay-to-win gear tiers.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon emerald">✚</div>
+          <h3>Finisher kills</h3>
+          <p>Last hit gets credit. No assist farming, no kill-steal exploits — just clean PvP.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon gold">🏆</div>
+          <h3>Leaderboards</h3>
+          <p>Kills, deaths, killstreaks, wealth, and playtime tracked in-game with hologram boards at spawn.</p>
+        </article>
+        <article class="feature-card reveal reveal-delay-4">
+          <div class="feature-icon redstone">⚡</div>
+          <h3>Combat tag</h3>
+          <p>FrostCombat keeps fights honest — no logging mid-fight. Earn tokens and streak rewards while you're tagged.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section mutators" id="mutators">
+      <div class="section-head reveal">
+        <h2>Map mutators</h2>
+        <p>Scheduled events that flip the arena on its head.</p>
+      </div>
+      <div class="mutator-grid">
+        <div class="mutator-chip reveal reveal-delay-1" data-color="border"><span>Shrinking Border</span></div>
+        <div class="mutator-chip reveal reveal-delay-2" data-color="fog"><span>Fog of War</span></div>
+        <div class="mutator-chip reveal reveal-delay-3" data-color="uhc"><span>UHC</span></div>
+        <div class="mutator-chip reveal reveal-delay-4" data-color="strength"><span>Strength III</span></div>
+        <div class="mutator-chip reveal reveal-delay-1" data-color="random"><span>Random Effects</span></div>
+        <div class="mutator-chip reveal reveal-delay-2" data-color="blackout"><span>Blackout</span></div>
+        <div class="mutator-chip reveal reveal-delay-3" data-color="mace"><span>Mace Roulette</span></div>
+      </div>
+    </section>
+
+    <section class="section store" id="store">
+      <div class="section-head reveal">
+        <h2>Supporter ranks</h2>
+        <p>Pay securely with Stripe. Perks apply in-game after purchase — join Discord if your rank isn’t instant.</p>
+      </div>
+
+      <form class="store-form reveal" id="store-form">
+        <label class="store-label" for="mc-username">Minecraft username</label>
+        <input
+          class="store-input"
+          id="mc-username"
+          name="username"
+          type="text"
+          maxlength="16"
+          autocomplete="username"
+          placeholder="YourExactUsername"
+          required
+          pattern="[A-Za-z0-9_]{3,16}"
+          title="3–16 characters: letters, numbers, underscore"
+        />
+        <p class="store-hint">Java Edition name only — must match exactly.</p>
+      </form>
+
+      <div class="rank-grid">
+        <article class="rank-card reveal reveal-delay-1" data-rank="ice">
+          <div class="rank-badge rank-ice">Ice</div>
+          <p class="rank-price"><span class="rank-amount">$1</span> <span class="rank-once">one-time</span></p>
+          <ul class="rank-perks">
+            <li>Ice chat prefix</li>
+            <li>Rank kit perks</li>
+            <li>Supporter badge</li>
+          </ul>
+          <button class="btn btn-rank btn-rank-ice" type="button" data-rank="ice">Buy Ice</button>
+        </article>
+
+        <article class="rank-card reveal reveal-delay-2" data-rank="snow">
+          <div class="rank-badge rank-snow">Snow</div>
+          <p class="rank-price"><span class="rank-amount">$3</span> <span class="rank-once">one-time</span></p>
+          <ul class="rank-perks">
+            <li>Everything in Ice</li>
+            <li>Snow prefix &amp; flair</li>
+            <li>Extra kit perks</li>
+          </ul>
+          <button class="btn btn-rank btn-rank-snow" type="button" data-rank="snow">Buy Snow</button>
+        </article>
+
+        <article class="rank-card rank-featured reveal reveal-delay-3" data-rank="frost">
+          <span class="rank-popular">Popular</span>
+          <div class="rank-badge rank-frost">Frost</div>
+          <p class="rank-price"><span class="rank-amount">$5</span> <span class="rank-once">one-time</span></p>
+          <ul class="rank-perks">
+            <li>Everything in Snow</li>
+            <li>Frost prefix</li>
+            <li>Premium kit perks</li>
+          </ul>
+          <button class="btn btn-rank btn-rank-frost" type="button" data-rank="frost">Buy Frost</button>
+        </article>
+
+        <article class="rank-card reveal reveal-delay-4" data-rank="subzero">
+          <div class="rank-badge rank-subzero">Subzero</div>
+          <p class="rank-price"><span class="rank-amount">$10</span> <span class="rank-once">one-time</span></p>
+          <ul class="rank-perks">
+            <li>Everything in Frost</li>
+            <li>Subzero top-tier prefix</li>
+            <li>Max supporter perks</li>
+          </ul>
+          <button class="btn btn-rank btn-rank-subzero" type="button" data-rank="subzero">Buy Subzero</button>
+        </article>
+      </div>
+
+      <p class="store-note reveal">Payments processed by <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>. Not affiliated with Mojang.</p>
+    </section>
+
+    <section class="section cta">
+      <div class="cta-panel reveal">
+        <h2>Ready to fight?</h2>
+        <p>Copy the IP, hop in Discord for updates, and meet us in the arena.</p>
+        <div class="cta-row">
+          <code class="cta-ip">frostffa.xyz</code>
+          <a class="btn btn-primary" href="https://discord.gg/playfrost" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Frost FFA · Not affiliated with Mojang or Microsoft</p>
+    <p>
+      <a href="https://discord.gg/playfrost" target="_blank" rel="noopener noreferrer">Discord</a>
+      ·
+      <span>frostffa.xyz</span>
+    </p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">IP copied!</div>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/store.js"></script>
+</body>
+</html>

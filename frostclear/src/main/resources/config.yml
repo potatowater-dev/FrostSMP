@@ -1,0 +1,35 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# {label} = items/blocks label, {time} = e.g. 30s
+warning-message: "<red><bold>{label} clears in {time}</bold></red>"
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  usage: "<gray>Usage: /frostclear reload</gray>"
+  reloaded: "<green>FrostClear reloaded.</green>"
+
+items:
+  enabled: true
+  interval-seconds: 300
+  command: "kill @e[type=item]"
+  label: "Items"
+  warnings: [30, 10, 5]
+  sound:
+    enabled: true
+    # Bukkit enum name, e.g. BLOCK_NOTE_BLOCK_PLING, ENTITY_EXPERIENCE_ORB_PICKUP
+    name: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.2
+
+blocks:
+  enabled: true
+  interval-seconds: 600
+  command: "kit cleanup"
+  label: "Blocks"
+  warnings: [10, 5, 1]
+  sound:
+    enabled: true
+    name: BLOCK_NOTE_BLOCK_BASS
+    volume: 1.0
+    pitch: 0.8

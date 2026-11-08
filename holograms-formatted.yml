@@ -1,0 +1,802 @@
+holograms:
+  bigPick:
+    type: ITEM
+    location:
+      world: world
+      x: 255.3941650390625
+      y: 83.24269104003906
+      z: 325.6993713378906
+      yaw: 0.079589844
+      pitch: -3.2980442
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 5.0
+    scale_y: 5.0
+    scale_z: 5.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: fixed
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      DataVersion: 4671
+      id: minecraft:diamond_pickaxe
+      count: 1
+      schema_version: 1
+
+  killsboard:
+    type: TEXT
+    location:
+      world: world
+      x: 268.0649108886719
+      y: 83.3787841796875
+      z: 232.36380004882812
+      yaw: -95.10256
+      pitch: 0.0
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - '&6&l🏆 TOP KILLS 🏆'
+      - '<yellow>1. %frostcombat_top_1_kills_player% <gray>- <white>%frostcombat_top_1_have_kills% Kills'
+      - '<white>2. %frostcombat_top_2_kills_player% <gray>- <white>%frostcombat_top_2_have_kills% Kills'
+      - '<red>3. %frostcombat_top_3_kills_player% <gray>- <white>%frostcombat_top_3_have_kills% Kills'
+      - '<gray>4. %frostcombat_top_4_kills_player% <gray>- <white>%frostcombat_top_4_have_kills% Kills'
+      - '<gray>5. %frostcombat_top_5_kills_player% <gray>- <white>%frostcombat_top_5_have_kills% Kills'
+      - '<white>==================='
+      - '<dark_gray>%frostcombat_rank_kills%. %player_name% <gray>- <white>%frostcombat_kills% Kills'
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: 300000
+    billboard: vertical
+
+  killstreakboard:
+    type: TEXT
+    location:
+      world: world
+      x: 268.0242614746094
+      y: 83.3787841796875
+      z: 236.60360717773438
+      yaw: -95.10256
+      pitch: 0.0
+    visibility_distance: 20
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: vertical
+    text:
+      - '&6&l🏆 TOP KILLSTREAK 🏆'
+      - '<yellow>1. %frostcombat_top_1_killstreak_player% <gray>- <white>%frostcombat_top_1_have_killstreak% KS'
+      - '<white>2. %frostcombat_top_2_killstreak_player% <gray>- <white>%frostcombat_top_2_have_killstreak% KS'
+      - '<red>3. %frostcombat_top_3_killstreak_player% <gray>- <white>%frostcombat_top_3_have_killstreak% KS'
+      - '<gray>4. %frostcombat_top_4_killstreak_player% <gray>- <white>%frostcombat_top_4_have_killstreak% KS'
+      - '<gray>5. %frostcombat_top_5_killstreak_player% <gray>- <white>%frostcombat_top_5_have_killstreak% KS'
+      - '<white>==================='
+      - '<gray>%frostcombat_place% %player_name% <gray>- <white>%frostcombat_killstreak% KS'
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  deathsboard:
+    type: TEXT
+    location:
+      world: world
+      x: 260.3193664550781
+      y: 83.28092193603516
+      z: 220.81195068359375
+      yaw: -95.10256
+      pitch: 0.0
+    visibility_distance: 20
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: vertical
+    text:
+      - '&6&l🏆 TOP DEATHS 🏆'
+      - '<yellow>1. %frostcombat_top_1_death_player% <gray>- <white>%frostcombat_top_1_have_death% Deaths'
+      - '<white>2. %frostcombat_top_2_death_player% <gray>- <white>%frostcombat_top_2_have_death% Deaths'
+      - '<red>3. %frostcombat_top_3_death_player% <gray>- <white>%frostcombat_top_3_have_death% Deaths'
+      - '<gray>4. %frostcombat_top_4_death_player% <gray>- <white>%frostcombat_top_4_have_death% Deaths'
+      - '<gray>5. %frostcombat_top_5_death_player% <gray>- <white>%frostcombat_top_5_have_death% Deaths'
+      - '<white>==================='
+      - '<dark_gray>%frostcombat_rank_death%. %player_name% <gray>- <white>%frostcombat_deaths% Deaths'
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  moneyboard:
+    type: TEXT
+    location:
+      world: world
+      x: 255.65467834472656
+      y: 83.28092193603516
+      z: 220.79835510253906
+      yaw: -95.10256
+      pitch: 0.0
+    visibility_distance: 20
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: vertical
+    text:
+      - '&6&l🏆 TOP WEALTH 🏆'
+      - '<yellow>1. %frostwallet_top_1_gem_player% <gray>- <white>%frostwallet_top_1_have_gem% Gems'
+      - '<white>2. %frostwallet_top_2_gem_player% <gray>- <white>%frostwallet_top_2_have_gem% Gems'
+      - '<gray>3. %frostwallet_top_3_gem_player% <gray>- <white>%frostwallet_top_3_have_gem% Gems'
+      - '<gray>4. %frostwallet_top_4_gem_player% <gray>- <white>%frostwallet_top_4_have_gem% Gems'
+      - '<gray>5. %frostwallet_top_5_gem_player% <gray>- <white>%frostwallet_top_5_have_gem% Gems'
+      - '<white>==================='
+      - '<dark_gray>%frostwallet_rank%. %player_name% <gray>- <white>%frostwallet_gems% Gems'
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: 300000
+
+  playtimeboard:
+    type: TEXT
+    location:
+      world: world
+      x: 251.08935546875
+      y: 83.28092193603516
+      z: 220.90713500976562
+      yaw: -95.10256
+      pitch: 0.0
+    visibility_distance: 20
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: vertical
+    text:
+      - '&6&l🏆 TOP PLAYTIME 🏆'
+      - '<yellow>1. %frostcombat_top_1_playtime_player% <gray>- <white>%frostcombat_top_1_have_playtime%'
+      - '<white>2. %frostcombat_top_2_playtime_player% <gray>- <white>%frostcombat_top_2_have_playtime%'
+      - '<red>3. %frostcombat_top_3_playtime_player% <gray>- <white>%frostcombat_top_3_have_playtime%'
+      - '<gray>4. %frostcombat_top_4_playtime_player% <gray>- <white>%frostcombat_top_4_have_playtime%'
+      - '<gray>5. %frostcombat_top_5_playtime_player% <gray>- <white>%frostcombat_top_5_have_playtime%'
+      - '<white>==================='
+      - '<dark_gray>%frostcombat_rank_playtime%. %player_name% <gray>- <white>%frostcombat_playtime%'
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: 300000
+
+  RIghttt:
+    type: TEXT
+    location:
+      world: world
+      x: 249.65139770507812
+      y: 83.1232681274414
+      z: 239.5271759033203
+      yaw: 29.089355
+      pitch: -12.343239
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - Click to TP
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Movement_label:
+    type: TEXT
+    location:
+      world: world
+      x: 263.53448486328125
+      y: 83.65814971923828
+      z: 233.5096435546875
+      yaw: -141.39941
+      pitch: -1.1456766
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Movement</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Stats:
+    type: TEXT
+    location:
+      world: world
+      x: 250.50816345214844
+      y: 82.15814971923828
+      z: 255.6999969482422
+      yaw: -2.6280518
+      pitch: -4.79148
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Stats</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Frost:
+    type: TEXT
+    location:
+      world: world
+      x: 255.6004638671875
+      y: 86.48504638671875
+      z: 238.30349731445312
+      yaw: 0.04472983
+      pitch: -9.369361
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 3.0
+    scale_y: 3.0
+    scale_z: 3.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Welcome to Frost FFA!</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Shulker:
+    type: TEXT
+    location:
+      world: world
+      x: 262.531982421875
+      y: 84.34564971923828
+      z: 239.5152587890625
+      yaw: 87.015686
+      pitch: 35.768364
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Guide</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  PVP:
+    type: TEXT
+    location:
+      world: world
+      x: 255.6136932373047
+      y: 84.45604705810547
+      z: 256.1877746582031
+      yaw: -1.5128784
+      pitch: -9.197046
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 3.0
+    scale_y: 3.0
+    scale_z: 3.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: vertical
+    text:
+      - <bold>PVP Arena</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Gems:
+    type: TEXT
+    location:
+      world: world
+      x: 247.52972412109375
+      y: 83.66344451904297
+      z: 234.49501037597656
+      yaw: 102.8927
+      pitch: -3.9882445
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Gems</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Weapons:
+    type: TEXT
+    location:
+      world: world
+      x: 247.51170349121094
+      y: 83.61582946777344
+      z: 232.4892120361328
+      yaw: 86.563416
+      pitch: -22.093884
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Weaponry</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Shulkers:
+    type: TEXT
+    location:
+      world: world
+      x: 256.48455810546875
+      y: 83.65814971923828
+      z: 225.4853515625
+      yaw: -166.63104
+      pitch: -12.8426695
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Shulkers</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Mace:
+    type: ITEM
+    location:
+      world: world
+      x: 267.84674072265625
+      y: 86.0687026977539
+      z: 232.33030700683594
+      yaw: -91.762146
+      pitch: 0.0
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: fixed
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      DataVersion: 4671
+      id: minecraft:heavy_core
+      count: 1
+      schema_version: 1
+
+  pICKAXE:
+    type: TEXT
+    location:
+      world: world
+      x: 263.4889221191406
+      y: 83.64561462402344
+      z: 231.47994995117188
+      yaw: -90.00757
+      pitch: -22.70405
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Pickaxe</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Regears:
+    type: TEXT
+    location:
+      world: world
+      x: 252.4911651611328
+      y: 83.61650085449219
+      z: 225.5094451904297
+      yaw: 178.12146
+      pitch: -19.982403
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Regears</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Cosmetics:
+    type: TEXT
+    location:
+      world: world
+      x: 263.5174255371094
+      y: 84.40000915527344
+      z: 229.51260375976562
+      yaw: -90.021065
+      pitch: 1.0555482
+    visibility_distance: 100
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Cosmetics</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  AFk:
+    type: TEXT
+    location:
+      world: world
+      x: 249.65139770507812
+      y: 83.4919662475586
+      z: 239.5271759033203
+      yaw: -179.07584
+      pitch: -5.0129642
+    visibility_distance: 100
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Afk</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  SWORDKS:
+    type: ITEM
+    location:
+      world: world
+      x: 268.05303955078125
+      y: 86.0687026977539
+      z: 236.64669799804688
+      yaw: -91.72638
+      pitch: 0.0
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    billboard: fixed
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      DataVersion: 4671
+      id: minecraft:blaze_powder
+      count: 1
+      schema_version: 1
+
+  pTP:
+    type: TEXT
+    location:
+      world: world
+      x: 248.48690795898438
+      y: 84.3056869506836
+      z: 239.511962890625
+      yaw: 60.763737
+      pitch: -15.95053
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - Click to TP
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Food:
+    type: TEXT
+    location:
+      world: world
+      x: 247.47801208496094
+      y: 83.65814971923828
+      z: 230.52005004882812
+      yaw: 89.31348
+      pitch: -6.4960546
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Food</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Plots:
+    type: TEXT
+    location:
+      world: world
+      x: 248.48690795898438
+      y: 84.68476867675781
+      z: 239.511962890625
+      yaw: 86.40814
+      pitch: -12.177839
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Plots</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Amethyst_timer:
+    type: TEXT
+    location:
+      world: world
+      x: 334.9938049316406
+      y: 13.625383377075195
+      z: 326.99029541015625
+      yaw: -10.804443
+      pitch: 11.310936
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 2.3
+    scale_y: 2.3
+    scale_z: 2.3
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>%saltmine_timer_amethyst%
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: 1000
+
+  2ndMoshpit:
+    type: TEXT
+    location:
+      world: world
+      x: 346.57000732421875
+      y: 19.02619743347168
+      z: 241.55596923828125
+      yaw: -90.13623
+      pitch: -4.6395564
+    visibility_distance: 30
+    visibility: ALL
+    persistent: true
+    scale_x: 5.0
+    scale_y: 5.0
+    scale_z: 5.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>MOSH PIT</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  Potions:
+    type: TEXT
+    location:
+      world: world
+      x: 254.50302124023438
+      y: 83.61650085449219
+      z: 225.5089874267578
+      yaw: 154.44916
+      pitch: -10.564015
+    visibility_distance: 1000
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - <bold>Potions</bold>
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+  rightSM:
+    type: TEXT
+    location:
+      world: world
+      x: 261.60089111328125
+      y: 83.15814971923828
+      z: 239.49661254882812
+      yaw: -56.94816
+      pitch: -13.740429
+    visibility_distance: -1
+    visibility: ALL
+    persistent: true
+    scale_x: 1.0
+    scale_y: 1.0
+    scale_z: 1.0
+    translation_x: 0.0
+    translation_y: 0.0
+    translation_z: 0.0
+    shadow_radius: 0.0
+    shadow_strength: 1.0
+    text:
+      - Click to TP
+    text_shadow: false
+    see_through: false
+    text_alignment: center
+    update_text_interval: -1
+
+version: 2 # DO NOT CHANGE

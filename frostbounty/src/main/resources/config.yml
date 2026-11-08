@@ -1,0 +1,28 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Max item stacks allowed in a single bounty place GUI
+max-reward-slots: 45
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /bounty <place <player>|list|reload></gray>"
+  reloaded: "<green>FrostBounty reloaded.</green>"
+  player-not-found: "<red>Player not found:</red> <white>{player}</white>"
+  cannot-bounty-self: "<red>You cannot place a bounty on yourself.</red>"
+  place-title: "<gold>Bounty:</gold> <white>{player}</white>"
+  place-empty: "<red>Put at least one item in the bounty before confirming.</red>"
+  place-confirmed: "<green>Bounty placed on</green> <white>{player}</white><green>.</green>"
+  place-broadcast: "<gold>Bounty:</gold> <white>{placer}</white> <gray>placed a bounty on</gray> <red>{player}</red> <gray>({count} stacks).</gray>"
+  place-cancelled: "<yellow>Bounty cancelled — items returned.</yellow>"
+  list-title: "<gold>Active Bounties</gold>"
+  list-empty: "<gray>There are no active bounties.</gray>"
+  list-head-name: "<red>{player}</red>"
+  list-head-lore-placer: "<gray>Placed by:</gray> <white>{placer}</white>"
+  list-head-lore-items: "<gray>Rewards:</gray> <white>{count}</white> <gray>stacks</gray>"
+  list-head-lore-entry: "<dark_gray>•</dark_gray> <white>{amount}x</white> <gray>{item}</gray>"
+  view-title: "<gold>Bounty loot:</gold> <white>{player}</white>"
+  claimed: "<green>You claimed the bounty on</green> <white>{player}</white><green>!</green>"
+  claimed-broadcast: "<gold>{killer}</gold> <gray>claimed the bounty on</gray> <white>{player}</white><gray>.</gray>"
+  target-killed-no-killer: "<yellow>Bounty on</yellow> <white>{player}</white> <yellow>expired (no killer).</yellow>"

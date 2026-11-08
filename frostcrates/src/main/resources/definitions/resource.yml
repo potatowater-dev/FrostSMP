@@ -1,0 +1,6 @@
+display-name: "<aqua>Resource Crate"
+display-block: LIGHT_BLUE_SHULKER_BOX
+broadcast-enabled: true
+broadcast-threshold-weight: 5
+open-cooldown-ms: 3000
+loot: []

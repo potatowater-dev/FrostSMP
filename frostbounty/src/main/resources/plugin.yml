@@ -1,0 +1,21 @@
+name: FrostBounty
+version: '${version}'
+main: com.frostsmp.bounty.FrostBountyPlugin
+api-version: '1.21'
+description: Place bounties with item rewards claimed on kill
+authors:
+  - FrostSMP
+
+commands:
+  bounty:
+    description: Place or list player bounties
+    usage: /bounty <place|list> [player]
+    aliases: [bounties, frostbounty]
+
+permissions:
+  frostsmp.bounty.use:
+    description: Place and view bounties
+    default: true
+  frostsmp.bounty.admin:
+    description: Reload FrostBounty
+    default: op

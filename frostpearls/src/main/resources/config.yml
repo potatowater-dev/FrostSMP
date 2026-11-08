@@ -1,0 +1,26 @@
+license:
+  key: "FrostSMP-ChangeMe"
+
+enabled: true
+min-pitch: -80
+
+cooldown:
+  enabled: true
+  seconds: 10
+
+pearl:
+  base-speed: 1.5
+  sprint-momentum-factor: 0.35
+  min-vertical-speed: 0.8
+  max-vertical-speed: 3.5
+
+wind-charge:
+  enabled: true
+  combo-window-ticks: 20
+  boost-y: 1.8
+  require-same-player: true
+
+debug: false
+
+messages:
+  pearl-cooldown: "<red>Pearl on cooldown: <white>{seconds}s</white></red>"

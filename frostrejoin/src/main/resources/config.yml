@@ -1,0 +1,35 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Main SMP players should return to after restart.
+return:
+  host: "frostffa.xyz"
+  port: 25640
+
+# Socket connection timeout in milliseconds when checking if main is reachable.
+connect-timeout-ms: 2500
+
+# Seconds to wait after player arrival before accepting that main is already online (prevents catching the old server right before it closes).
+startup-grace-seconds: 5
+
+# How often to check if the main server is accepting connections.
+poll-interval-seconds: 5
+
+# Extra wait after main is reachable before transferring (lets it finish loading plugins).
+stable-seconds: 15
+
+# Max time to keep polling (0 = forever until success or /frostrejoin now).
+timeout-seconds: 0
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  usage: "<gray>Usage: /frostrejoin <now|status|reload></gray>"
+  reloaded: "<green>FrostRejoin reloaded.</green>"
+  waiting: "<gold>Server restarting...</gold> <gray>You will rejoin automatically.</gray>"
+  main-online: "<green>Main server is back!</green> <gray>Rejoining in <white>{seconds}s</white>...</gray>"
+  transferring: "<gold>Transferring you back to the main server...</gold>"
+  forced: "<green>Forcing rejoin for all online players.</green>"
+  status-waiting: "<gray>Waiting for main</gray> <white>{host}:{port}</white><gray>...</gray>"
+  status-ready: "<green>Main is online.</green> <gray>Rejoin in progress.</gray>"
+  status-idle: "<gray>Idle — no rejoin pending.</gray>"
+  status-line: "<gray>Pending:</gray> <white>{count}</white> <gray>· State:</gray> <white>{state}</white> <gray>· Main:</gray> <white>{host}:{port}</white>"

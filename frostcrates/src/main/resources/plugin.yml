@@ -1,0 +1,34 @@
+name: FrostCrates
+version: '${version}'
+main: com.frostsmp.crates.FrostCratesPlugin
+api-version: '1.21'
+description: Virtual-key crate system with colored shulker boxes and holograms
+authors:
+  - FrostSMP
+softdepend:
+  - LuckPerms
+
+commands:
+  crate:
+    description: FrostCrates commands
+    usage: /crate <claim|keys|create|wand|block|delete|reload|respawn|list>
+    aliases:
+      - crates
+  keyall:
+    description: Give crate keys to every online player
+    usage: /keyall <crate> <amount>
+    permission: frostsmp.crates.admin
+
+permissions:
+  frostsmp.crates.open:
+    description: Open and preview crates
+    default: true
+  frostsmp.crates.admin:
+    description: Manage crate definitions, keys, and placements
+    default: op
+  frostsmp.crates.skip-animation:
+    description: Skip crate opening animation
+    default: false
+  frostsmp.crates.cooldown.bypass:
+    description: Bypass crate open cooldowns
+    default: op

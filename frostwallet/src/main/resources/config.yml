@@ -1,0 +1,37 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+currencies:
+  kill_token:
+    name: Kill Tokens
+    denominations:
+      - id: regular
+        worth: 1
+        item: 'minecraft:nether_star[custom_name={"text":"","extra":[{"text":"K","bold":true,"italic":false,"color":"#c77dff"},{"text":"i","bold":true,"italic":false,"color":"#cd85fa"},{"text":"l","bold":true,"italic":false,"color":"#d391f5"},{"text":"l","bold":true,"italic":false,"color":"#da9df1"},{"text":" ","bold":true,"italic":false,"color":"#e0aaec"},{"text":"T","bold":true,"italic":false,"color":"#e6b6e7"},{"text":"o","bold":true,"italic":false,"color":"#edc2e2"},{"text":"k","bold":true,"italic":false,"color":"#f3ceDD"},{"text":"e","bold":true,"italic":false,"color":"#f9dbd8"},{"text":"n","bold":true,"italic":false,"color":"#ffd6ff"}]},custom_data={coin:1b}]'
+      - id: compressed
+        worth: 64
+        item: 'minecraft:nether_star[custom_name={"text":"Compressed Kill Token","bold":true,"italic":false,"color":"#c77dff"},custom_data={coin:64b}]'
+
+messages:
+  prefix: "<gold>Wallet</gold> <dark_gray>·</dark_gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage-wallet: "<gray>Usage: /wallet [deposit [amount]|withdraw <currency> <amount>|reload|reset]</gray>"
+  usage-deposit: "<gray>Usage: /deposit [amount]</gray>"
+  usage-withdraw: "<gray>Usage: /withdraw <currency> <amount></gray>"
+  usage-depositall: "<gray>Usage: /depositall [currency]</gray>"
+  reloaded: "<green>FrostWallet reloaded.</green>"
+  reset-all: "<green>All wallet balances have been reset.</green>"
+  unknown-currency: "<red>Unknown currency:</red> <white>{currency}</white>"
+  invalid-amount: "<red>Amount must be a positive whole number.</red>"
+  empty-hand: "<red>Hold a currency item to deposit.</red>"
+  not-currency: "<red>That item is not a wallet currency.</red>"
+  not-enough-items: "<red>You do not have that many of that item.</red>"
+  not-enough-balance: "<red>Not enough</red> <white>{currency}</white><red>.</red> <gray>Balance:</gray> <white>{balance}</white>"
+  cannot-make-amount: "<red>Cannot withdraw</red> <white>{amount}</white> <gray>{currency}</gray> <red>with configured denominations.</red>"
+  balance-header: "<gold>Your wallet</gold>"
+  balance-line: "<gray>{currency}:</gray> <white>{balance}</white>"
+  balance-empty: "<gray>Your wallet is empty.</gray>"
+  deposited: "<green>Deposited</green> <white>{items}</white> <gray>item(s)</gray> <green>(+{worth}</green> <white>{currency}</white><green>).</green>"
+  deposited-none: "<gray>No depositable items found.</gray>"
+  withdrawn: "<green>Withdrew</green> <white>{amount}</white> <white>{currency}</white><green>.</green>"

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "autogg",
+  "version": "${version}",
+  "name": "AutoGG",
+  "description": "Press a keybind to run a configurable command (default /msg) to the last player you hit, or who hit you. Anti-spam, Cloth Config, and Mod Menu supported.",
+  "authors": ["FrostSMP"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/autogg/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.frostsmp.autogg.AutoGgClient"],
+    "modmenu": ["com.frostsmp.autogg.AutoGgModMenu"]
+  },
+  "mixins": [
+    "autogg.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cloth-config": ">=21.11.0"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

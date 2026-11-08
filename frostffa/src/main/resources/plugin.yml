@@ -1,0 +1,32 @@
+name: FrostFFA
+version: '${version}'
+main: com.frostsmp.ffa.FrostFfaPlugin
+api-version: '1.21'
+description: FFA kits and region-scoped mutators (MIT)
+authors:
+  - FrostSMP
+depend:
+  - WorldGuard
+softdepend:
+  - PlaceholderAPI
+  - TAB
+
+commands:
+  ffa:
+    description: FrostFFA kits and admin
+    usage: /ffa <kit|mutator|schedule|reload>
+    aliases: [frostffa]
+
+permissions:
+  frostsmp.ffa.kit:
+    description: Claim the FFA kit
+    default: true
+  frostsmp.ffa.kit.booster:
+    description: Booster kit perk
+    default: false
+  frostsmp.ffa.kit.rank:
+    description: Rank kit perk
+    default: false
+  frostsmp.ffa.admin:
+    description: Manage mutators and config
+    default: op

@@ -1,0 +1,14 @@
+# Shared secret with Firebase STORE_API_KEY
+api-key: "CHANGE_ME"
+
+# Hosted API (Firebase Hosting rewrite)
+api-base-url: "https://frostffa.web.app"
+
+poll-seconds: 8
+
+# {user} = Minecraft username, {group} = ice|snow|frost|subzero
+grant-command: "lp user {user} parent set {group}"
+
+messages:
+  granted: "<gold>Store</gold> <dark_gray>·</dark_gray> <green>Granted</green> <white>{group}</white> <gray>to</gray> <white>{user}</white>"
+  granted-player: "<gold>Thanks for supporting Frost FFA!</gold> <gray>You received</gray> <aqua>{rank}</aqua><gray>.</gray>"

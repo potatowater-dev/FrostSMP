@@ -1,0 +1,56 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+interval-minutes: 15
+loot-seconds: 120
+max-per-team: 2
+
+wand:
+  material: BLAZE_ROD
+  name: "<gold><bold>Colosseum Wand</bold></gold>"
+  lore:
+    - "<gray>Left-click: set pos1</gray>"
+    - "<gray>Right-click: set pos2</gray>"
+    - "<yellow>/colo setregion <name></yellow>"
+
+messages:
+  prefix: "<gold><bold>Colosseum</bold></gold> <gray>»</gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  wand-given: "<green>Colosseum wand given.</green>"
+  pos1-set: "<green>Pos1 set to <white>{loc}</white>.</green>"
+  pos2-set: "<green>Pos2 set to <white>{loc}</white>.</green>"
+  need-selection: "<red>Select pos1 and pos2 with the wand first.</red>"
+  region-set: "<green>Region <yellow>{region}</yellow> saved.</green>"
+  spawn-set: "<green>Spawn <yellow>{spawn}</yellow> set to your location.</green>"
+  unknown-region: "<red>Unknown region. Use: platform_red, platform_blue, arena, spectate</red>"
+  unknown-spawn: "<red>Unknown spawn. Use: red, blue, exit</red>"
+  platform-full: "<red>That team platform is full (max {max}).</red>"
+  platforms-closed: "<red>Platforms are closed while a match is running.</red>"
+  queued-red: "<red>Queued for <bold>RED</bold> team.</red>"
+  queued-blue: "<aqua>Queued for <bold>BLUE</bold> team.</aqua>"
+  left-queue: "<gray>You left the Colosseum queue.</gray>"
+  skip-round: "<yellow>Colosseum skipped — need at least 1 player on each platform.</yellow>"
+  match-start: "<gold><bold>FIGHT!</bold></gold> <red>Red</red> <gray>vs</gray> <aqua>Blue</aqua>"
+  eliminated: "<red>You were eliminated! Spectating from the colosseum.</red>"
+  winners: "<green>Team <yellow>{team}</yellow> wins! Loot window: <white>{seconds}s</white>.</green>"
+  reward-given: "<green>You received the Colosseum reward!</green>"
+  no-reward: "<yellow>No reward configured. Use /colo setreward.</yellow>"
+  match-reset: "<gray>Colosseum reset. Platforms are open again.</gray>"
+  arena-blocked: "<red>You cannot enter the arena right now.</red>"
+  status: "<gray>State:</gray> <white>{state}</white> <gray>· Next:</gray> <white>{next}</white> <gray>· Queue:</gray> <red>R{red}</red><gray>/</gray><aqua>B{blue}</aqua>"
+  incomplete-setup: "<red>Colosseum is not fully configured. Missing: {missing}</red>"
+  force-start: "<green>Forced match start.</green>"
+  force-end: "<yellow>Forced match end.</yellow>"
+  reloaded: "<green>FrostColosseum reloaded.</green>"
+  reward-saved: "<green>Colosseum reward saved.</green>"
+  reward-cleared: "<yellow>Colosseum reward cleared.</yellow>"
+  usage: |
+    <gold><bold>FrostColosseum</bold></gold>
+    <yellow>/colo status</yellow> <gray>- Queue and timer</gray>
+    <yellow>/colo wand</yellow> <gray>- Selection wand</gray>
+    <yellow>/colo setregion <name></yellow>
+    <yellow>/colo setspawn <red|blue|exit></yellow>
+    <yellow>/colo setreward</yellow> <gray>- Reward GUI</gray>
+    <yellow>/colo admin</yellow> <gray>- Admin GUI</gray>
+    <yellow>/colo forcestart|forceend|reload</yellow>

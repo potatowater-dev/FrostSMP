@@ -1,0 +1,23 @@
+name: FrostParkour
+version: '${version}'
+main: com.frostsmp.parkour.FrostParkourPlugin
+api-version: '1.21'
+description: Dynamic parkour system with checkpoints, timer, custom items, GUI leaderboards, and PAPI
+authors:
+  - FrostSMP
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  parkour:
+    description: FrostParkour player and admin commands
+    usage: /parkour <start|quit|restart|checkpoint|top|stats|create|delete|setstart|setend|addcheckpoint|removecheckpoint|list|reload>
+    aliases: [frostparkour, pk]
+
+permissions:
+  frostsmp.parkour.use:
+    description: Play parkour courses and view stats/leaderboards
+    default: true
+  frostsmp.parkour.admin:
+    description: Create and configure parkour courses
+    default: op

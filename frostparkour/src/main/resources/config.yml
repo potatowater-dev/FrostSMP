@@ -1,0 +1,174 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+settings:
+  # Action bar timer display while playing parkour (m:s:ms | X/total ⚑)
+  actionbar-timer:
+    enabled: true
+    format: "<yellow><bold>{time}</bold></yellow> <gray>|</gray> <gold>{checkpoint}/{total_checkpoints} ⚑</gold>"
+  
+  # Title on course finish
+  finish-title:
+    title: "<gold><bold>COURSE COMPLETE!</bold></gold>"
+    subtitle: "<gray>Your time:</gray> <yellow>{time}</yellow> {new_best}"
+    new-best-tag: "<green><bold>[NEW RECORD]</bold></green>"
+
+  # Fall detection: if player Y drops below current checkpoint Y minus this amount, auto-teleport back
+  fall-detection:
+    enabled: true
+    y-offset: 4.0
+    void-instant-teleport: true
+
+  # Protect player while in parkour
+  prevent-damage: true
+  prevent-hunger: true
+  prevent-block-break: true
+  prevent-block-place: true
+  prevent-item-drop: true
+  prevent-item-pickup: true
+
+# Items given to the player's hotbar while doing parkour
+hotbar-items:
+  restart:
+    slot: 0
+    material: CLOCK
+    name: "<gold><bold>Restart Course</bold></gold>"
+    lore:
+      - "<gray>Right-click to teleport to start</gray>"
+      - "<gray>and reset your timer.</gray>"
+  checkpoint:
+    slot: 4
+    material: ARROW
+    name: "<green><bold>Last Checkpoint</bold></green>"
+    lore:
+      - "<gray>Right-click to return to your</gray>"
+      - "<gray>latest checkpoint reached.</gray>"
+  quit:
+    slot: 7
+    material: RED_BED
+    name: "<red><bold>Quit Parkour</bold></red>"
+    lore:
+      - "<gray>Right-click to leave parkour and</gray>"
+      - "<gray>restore your previous inventory.</gray>"
+
+# Sound effects
+sounds:
+  start: "BLOCK_NOTE_BLOCK_PLING:1.0:1.0"
+  checkpoint: "ENTITY_PLAYER_LEVELUP:1.0:1.5"
+  finish: "UI_TOAST_CHALLENGE_COMPLETE:1.0:1.0"
+  restart: "ENTITY_ENDERMAN_TELEPORT:1.0:1.2"
+  teleport-checkpoint: "ENTITY_ENDERMAN_TELEPORT:1.0:1.0"
+  fall: "BLOCK_NOTE_BLOCK_BASS:1.0:0.5"
+  new-record: "ENTITY_FIREWORK_ROCKET_LAUNCH:1.0:1.0"
+
+# Leaderboard GUI
+leaderboard-gui:
+  title: "<dark_gray>Top Times: <gold>{course}</gold></dark_gray>"
+  size: 45
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  # Slots for ranks 1 through 10
+  rank-slots: [10, 11, 12, 13, 14, 19, 20, 21, 22, 23]
+  entry-format:
+    material: PLAYER_HEAD
+    name: "<gold>#{rank}</gold> <yellow>{player}</yellow>"
+    lore:
+      - "<gray>Time:</gray> <white>{time}</white>"
+      - "<gray>Date:</gray> <white>{date}</white>"
+  empty-slot:
+    material: BARRIER
+    name: "<red>#{rank} - Empty</red>"
+    lore:
+      - "<gray>No record set yet!</gray>"
+  personal-best:
+    slot: 31
+    material: NETHER_STAR
+    name: "<gold><bold>Your Best Time</bold></gold>"
+    lore:
+      - "<gray>Course:</gray> <white>{course}</white>"
+      - "<gray>Best Time:</gray> <yellow>{time}</yellow>"
+      - "<gray>Rank:</gray> <white>{rank}</white>"
+      - "<gray>Completions:</gray> <white>{completions}</white>"
+      - "<gray>Attempts:</gray> <white>{attempts}</white>"
+  close-button:
+    slot: 40
+    material: BARRIER
+    name: "<red><bold>Close</bold></red>"
+
+# Personal Stats GUI
+stats-gui:
+  title: "<dark_gray>Parkour Stats: <gold>{player}</gold></dark_gray>"
+  size: 36
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+  course-item:
+    material: COMPASS
+    name: "<gold><bold>{course}</bold></gold>"
+    lore:
+      - "<gray>Best Time:</gray> <yellow>{best_time}</yellow>"
+      - "<gray>Rank:</gray> <white>{rank}</white>"
+      - "<gray>Total Completions:</gray> <white>{completions}</white>"
+      - "<gray>Total Attempts:</gray> <white>{attempts}</white>"
+      - ""
+      - "<yellow>Click to view leaderboard</yellow>"
+  close-button:
+    slot: 31
+    material: BARRIER
+    name: "<red><bold>Close</bold></red>"
+
+# Messages
+messages:
+  prefix: "<gold><bold>Parkour</bold></gold> <gray>»</gray> "
+  no-permission: "<red>You don't have permission to do this.</red>"
+  players-only: "<red>Only players can execute this command.</red>"
+  already-in-parkour: "<red>You are already playing a parkour course! Use <yellow>/parkour quit</yellow> first.</red>"
+  not-in-parkour: "<red>You are not currently doing parkour.</red>"
+  course-not-found: "<red>Course <yellow>{course}</yellow> was not found.</red>"
+  course-created: "<green>Successfully created course <yellow>{course}</yellow>.</green>"
+  course-deleted: "<green>Successfully deleted course <yellow>{course}</yellow>.</green>"
+  course-exists: "<red>A course with ID <yellow>{course}</yellow> already exists.</red>"
+  start-set: "<green>Start point for <yellow>{course}</yellow> set to your current location.</green>"
+  end-set: "<green>End point for <yellow>{course}</yellow> set to your current location.</green>"
+  checkpoint-added: "<green>Added checkpoint #<yellow>{index}</yellow> for <yellow>{course}</yellow> at your current location.</green>"
+  checkpoint-removed: "<green>Removed checkpoint #<yellow>{index}</yellow> from <yellow>{course}</yellow>.</green>"
+  invalid-checkpoint-index: "<red>Invalid checkpoint index. Valid range: 1 to {total}.</red>"
+  fally-set: "<green>Fall Y for <yellow>{course}</yellow> set to <yellow>{y}</yellow>.</green>"
+  displayname-set: "<green>Display name for <yellow>{course}</yellow> updated.</green>"
+  leaderboard-reset: "<green>Leaderboard for <yellow>{course}</yellow> has been reset.</green>"
+  reloaded: "<green>FrostParkour configuration and courses reloaded.</green>"
+  course-started: "<green>Parkour started! Reach the end as fast as you can.</green>"
+  checkpoint-reached: "<green><bold>Checkpoint #{checkpoint}!</bold></green> <gray>Current time:</gray> <yellow>{time}</yellow>"
+  checkpoint-teleport: "<yellow>Teleported to checkpoint #{checkpoint}.</yellow>"
+  restarted: "<yellow>Restarted course.</yellow>"
+  quit: "<red>You left the parkour course.</red>"
+  fell: "<red>You fell! Teleported back to checkpoint #{checkpoint}.</red>"
+  new-record-broadcast: "<gold><bold>PARKOUR</bold></gold> <yellow>{player}</yellow> <gray>set a new record on</gray> <gold>{course}</gold><gray>: <yellow>{time}</yellow>!</gray>"
+  finished: "<green>Finished <gold>{course}</gold> in <yellow>{time}</yellow>!</green>"
+  command-blocked: "<red>You cannot use this command while in parkour. Use /parkour quit to leave.</red>"
+  teleport-blocked: "<red>Teleportation is blocked while in parkour. Use /parkour quit to leave.</red>"
+  flight-detected: "<red><bold>Parkour Cancelled!</bold> Flying or gliding is not allowed during parkour.</red>"
+  inventory-restored: "<green>Your inventory and position have been restored.</green>"
+  no-records: "<gray>No leaderboard records found for <yellow>{course}</yellow>.</gray>"
+  usage: |
+    <gold><bold>FrostParkour Commands:</bold></gold>
+    <yellow>/parkour start <course></yellow> <gray>- Start a course</gray>
+    <yellow>/parkour quit</yellow> <gray>- Leave current course</gray>
+    <yellow>/parkour restart</yellow> <gray>- Restart current course</gray>
+    <yellow>/parkour checkpoint</yellow> <gray>- Return to last checkpoint</gray>
+    <yellow>/parkour top <course></yellow> <gray>- Open course leaderboard GUI</gray>
+    <yellow>/parkour stats [course] [player]</yellow> <gray>- View personal parkour stats</gray>
+    <yellow>/parkour list</yellow> <gray>- List all available courses</gray>
+  admin-usage: |
+    <gold><bold>Admin Commands:</bold></gold>
+    <yellow>/parkour create <id> [displayName]</yellow>
+    <yellow>/parkour delete <id></yellow>
+    <yellow>/parkour setstart <id></yellow>
+    <yellow>/parkour setend <id></yellow>
+    <yellow>/parkour addcheckpoint <id></yellow>
+    <yellow>/parkour removecheckpoint <id> <index></yellow>
+    <yellow>/parkour setdisplayname <id> <name></yellow>
+    <yellow>/parkour setfally <id> <y></yellow>
+    <yellow>/parkour resetleaderboard <id></yellow>
+    <yellow>/parkour reload</yellow>

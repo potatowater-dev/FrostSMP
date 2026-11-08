@@ -1,0 +1,21 @@
+name: FrostSpeed
+version: '${version}'
+main: com.frostsmp.speed.FrostSpeedPlugin
+api-version: '1.21'
+description: Custom speed potions via movement-speed attributes and real HUD icon
+authors:
+  - FrostSMP
+
+commands:
+  frostspeed:
+    description: Give the custom speed potion or reload
+    usage: /frostspeed <give|reload> [player] [amount]
+    aliases: [fspeed]
+
+permissions:
+  frostsmp.speed.use:
+    description: Drink custom speed potions
+    default: true
+  frostsmp.speed.admin:
+    description: Give potions and reload FrostSpeed
+    default: op

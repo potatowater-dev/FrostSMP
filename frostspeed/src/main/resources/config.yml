@@ -1,0 +1,20 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+# Real boost is an attribute, never minecraft:speed (broken on this server).
+# Vanilla Speed I is ADD_SCALAR 0.20 (+20%). ADD_NUMBER 0.05 is a flat +0.05 on base 0.1.
+magnitude: 0.20
+operation: ADD_SCALAR
+duration-ticks: 300
+particle-radius: 16
+amplifier: 0
+
+messages:
+  prefix: "<aqua>Speed</aqua> <dark_gray>·</dark_gray> "
+  no-permission: "<red>No permission.</red>"
+  players-only: "<red>Players only.</red>"
+  usage: "<gray>Usage: /frostspeed <give [player] [amount]|reload></gray>"
+  reloaded: "<green>FrostSpeed reloaded.</green>"
+  given: "<green>Gave</green> <white>{amount}x</white> <aqua>Speed Potion</aqua> <green>to</green> <white>{player}</white><green>.</green>"
+  player-offline: "<red>Player is offline.</red>"
+  drunk: "<gray>Speed for</gray> <white>{seconds}s</white><gray>.</gray>"

@@ -1,0 +1,30 @@
+license:
+  key: "FrostSMP-h7v-jkkv-U12"
+
+default-minutes: 5
+
+combat-log-grace-seconds: 20
+
+# Holding-server transfer / FrostRejoin flow.
+# When enabled, sends players to holding server before shutdown so they can rejoin automatically.
+transfer:
+  enabled: true
+  host: "85.11.102.61"
+  port: 25795
+  at-seconds: 8
+  delay-seconds: 15
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  usage: "<gray>Usage: /frostrestart <start [minutes]|now|cancel|status></gray>"
+  already-scheduled: "<red>A restart is already scheduled.</red>"
+  not-scheduled: "<gray>No restart is scheduled.</gray>"
+  cancelled: "<yellow>Scheduled restart cancelled.</yellow>"
+  scheduled: "<gold>Restart</gold> <gray>·</gray> <white>{minutes}m</white> <gray>until shutdown.</gray>"
+  announce-5m: "<gold>Restart</gold> <gray>in</gray> <white>5 minutes</white><gray>.</gray>"
+  announce-1m: "<gold>Restart</gold> <gray>in</gray> <white>1 minute</white><gray>.</gray>"
+  announce-30s: "<gold>Restart</gold> <gray>in</gray> <white>30 seconds</white><gray>.</gray>"
+  announce-countdown: "<gold>Restart</gold> <gray>in</gray> <white>{seconds}s</white><gray>.</gray>"
+  status: "<gray>Restart in</gray> <white>{time}</white><gray>.</gray>"
+  restarting: "<red>Restarting now...</red>"
+  transferring: "<gold>Transferring you to the holding server...</gold>"

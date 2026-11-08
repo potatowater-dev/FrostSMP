@@ -1,0 +1,38 @@
+name: FrostChat
+version: '${version}'
+main: com.frostsmp.chat.FrostChatPlugin
+api-version: '1.21'
+description: LPC chat addon for wallet, item, inventory, ender chest tags, and player stats
+authors:
+  - FrostSMP
+softdepend:
+  - LPC
+  - LPCPro
+  - FrostWallet
+  - FrostCombat
+  - PlaceholderAPI
+  - LuckPerms
+
+commands:
+  frostchat:
+    description: Internal FrostChat command
+    usage: /frostchat <reload|test>
+  stats:
+    description: Open a player's FrostSMP stats GUI
+    usage: /stats [player]
+    permission: frostsmp.chat.stats
+    aliases: [stat, pstats]
+
+permissions:
+  frostsmp.chat.use:
+    description: Use FrostChat tags
+    default: true
+  frostsmp.chat.stats:
+    description: Open /stats for yourself
+    default: true
+  frostsmp.chat.stats.others:
+    description: Open /stats for other players
+    default: true
+  frostsmp.chat.admin:
+    description: Reload FrostChat
+    default: op

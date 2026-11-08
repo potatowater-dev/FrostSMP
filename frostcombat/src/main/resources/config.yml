@@ -1,0 +1,63 @@
+license:
+  key: "FrostSMP-ChangeMe"
+
+combat-duration-seconds: 30
+
+remove-mace-recipe: true
+
+animation:
+  ticks-per-letter: 4
+
+block-pearls-in-combat: true
+
+# If true, TIMED_OUT / lag disconnects while tagged do NOT combat-log kill you.
+# Intentional quit (/quit, alt+f4 after clean leave) still counts as combat logging.
+ignore-timeout-combat-log: true
+
+allowed-commands:
+  - msg
+  - teammsg
+  - r
+  - extrainventory
+
+spawn:
+  use-world-spawn: true
+  world: world
+  delay-seconds: 5
+
+explosion-damage:
+  enabled: true
+  minecart-hearts: 3
+  expo-cart-hearts: 5
+  expo-velocity-threshold: 0.35
+
+# Kill tokens by killer streak AFTER the kill. Gaps 6-9 stay at 1 token.
+# max: -1 means no upper bound.
+kill-tokens:
+  streak-rewards:
+    - min: 0
+      max: 9
+      tokens: 1
+    - min: 10
+      max: 24
+      tokens: 2
+    - min: 25
+      max: 49
+      tokens: 3
+    - min: 50
+      max: -1
+      tokens: 4
+
+messages:
+  command-blocked: "<red>You cannot use that command while in combat.</red>"
+  pearl-blocked: "<red>You cannot use pearls while in combat.</red>"
+  combat-log-penalty: "<red>You combat logged and were killed.</red>"
+  combat-log-broadcast: "<red>{player}</red> <gray>combat logged.</gray>"
+  spawn-countdown: "<gray>Spawning in <white>{seconds}s</white>...</gray>"
+  spawn-started: "<green>Teleporting to spawn in 5 seconds. Do not move.</green>"
+  spawn-teleported: "<green>Teleported to spawn.</green>"
+  spawn-combat-blocked: "<red>You cannot use /spawn while in combat.</red>"
+  spawn-already-pending: "<yellow>A spawn teleport is already in progress.</yellow>"
+  spawn-cancelled-move: "<red>Spawn teleport cancelled — you moved.</red>"
+  spawn-cancelled-combat: "<red>Spawn teleport cancelled — you entered combat.</red>"
+  spawn-cancelled-damage: "<red>Spawn teleport cancelled — you took damage.</red>"

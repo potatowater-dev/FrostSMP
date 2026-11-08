@@ -1,0 +1,68 @@
+license:
+  key: "FrostSMP-ChangeMe"
+
+event-world: world
+
+# How many players can be juggernauts at once. The event ends when all of them are down.
+max-juggernauts: 2
+
+# Seconds a juggernaut may stay disconnected before they count as eliminated.
+# Set to 0 to eliminate them the moment they leave.
+juggernaut-reconnect-grace-seconds: 120
+
+# Count only the health a hit actually removed, so a killing blow cannot inflate a score.
+cap-overkill-damage: true
+
+winner-announce-delay-ticks: 10
+
+title:
+  fade-in-ticks: 5
+  stay-ticks: 40
+  fade-out-ticks: 10
+
+bossbar:
+  enabled: true
+  # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  color: RED
+  # SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+  style: SOLID
+  update-ticks: 10
+  # {top} {top_damage} {your_damage} {rank} {alive} {total}
+  format: "<gold>#1</gold> <white>{top}</white> <gray>{top_damage}</gray> <dark_gray>|</dark_gray> <aqua>You</aqua> <white>{your_damage}</white>"
+  format-juggernaut: "<red>JUGGERNAUT</red> <dark_gray>|</dark_gray> <gold>#1</gold> <white>{top}</white> <gray>{top_damage}</gray>"
+  empty-name: "<gray>nobody</gray>"
+
+messages:
+  no-permission: "<red>No permission.</red>"
+  usage: "<gray>Usage: /juggernaut <manage|top|status|stop|reload></gray>"
+  players-only: "<red>Players only.</red>"
+  reloaded: "<green>FrostJuggernaut reloaded.</green>"
+  no-selection: "<red>Select a juggernaut first.</red>"
+  juggernaut-offline: "<red>{player} is offline.</red>"
+  already-active: "<red>Event is already running.</red>"
+  not-running: "<red>No event to stop.</red>"
+  selected: "<green>Selected</green> <white>{player}</white> <green>as juggernaut.</green> <dark_gray>({count}/{max})</dark_gray>"
+  deselected: "<yellow>Removed</yellow> <white>{player}</white> <yellow>from the juggernauts.</yellow>"
+  max-selected: "<red>Only {max} juggernaut(s) allowed. Click one to remove it first.</red>"
+  event-started: "<gold>Juggernaut</gold> <gray>·</gray> <white>{juggernaut}</white> <gray>is live. PvP on.</gray>"
+  title-started: "<gold>JUGGERNAUT</gold>"
+  subtitle-started: "<white>{juggernaut}</white>"
+  juggernaut-eliminated: "<red>{juggernaut} is down.</red> <gray>{remaining}/{total} juggernauts left.</gray>"
+  juggernaut-quit: "<yellow>{juggernaut} disconnected.</yellow> <gray>{seconds}s to reconnect or they are out.</gray>"
+  juggernaut-returned: "<green>{juggernaut} is back.</green> <gray>Event continues.</gray>"
+  juggernaut-timed-out: "<red>{juggernaut} did not reconnect and is out.</red> <gray>{remaining}/{total} juggernauts left.</gray>"
+  juggernaut-down-chat: "<red>All juggernauts down.</red> <gray>{juggernaut} eliminated.</gray>"
+  title-down: "<red>JUGGERNAUTS DOWN</red>"
+  subtitle-down: "<gray>{juggernaut}</gray>"
+  winner-chat: "<gold>Winner</gold> <gray>·</gray> <white>{winner}</white> <dark_gray>({damage} total dmg)</dark_gray>"
+  title-winner: "<gold>WINNER</gold>"
+  subtitle-winner: "<white>{winner}</white> <gray>{damage} dmg</gray>"
+  no-winner: "<gray>No damage recorded. No winner.</gray>"
+  event-stopped: "<gray>Juggernaut event ended.</gray>"
+  event-cancelled: "<red>Juggernaut event cancelled.</red>"
+  world-missing: "<red>Event world not found.</red>"
+  status-idle: "<gray>Juggernaut</gray> <dark_gray>·</dark_gray> <white>{state}</white> <dark_gray>·</dark_gray> <gray>selected:</gray> <white>{juggernaut}</white>"
+  status-running: "<gray>Juggernaut</gray> <dark_gray>·</dark_gray> <white>{state}</white> <dark_gray>·</dark_gray> <white>{juggernaut}</white> <dark_gray>·</dark_gray> <gray>alive</gray> <white>{alive}/{total}</white>"
+  top-header: "<gold>Top damage</gold>"
+  top-line: "<gray>{rank}.</gray> <white>{player}</white> <dark_gray>-</dark_gray> <yellow>{damage}</yellow>"
+  top-empty: "<gray>No damage recorded yet.</gray>"

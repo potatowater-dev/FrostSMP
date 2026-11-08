@@ -1,0 +1,32 @@
+name: FrostPlots
+version: '${project.version}'
+main: com.frost.plots.FrostPlotsPlugin
+api-version: '1.21'
+description: Dedicated-world plots with WorldGuard regions, roles, and upgrades
+authors:
+  - FrostSMP
+depend:
+  - WorldGuard
+  - WorldEdit
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  plot:
+    description: Create and manage FrostPlots
+    usage: /plot <create|home|visit|public|private|setspawn|add|remove|promote|upgrade|info|list|delete|setcost>
+    aliases: [plots, frostplots]
+
+permissions:
+  frostplots.use:
+    description: Use /plot commands
+    default: true
+  frostplots.create:
+    description: Create a plot
+    default: true
+  frostplots.admin:
+    description: Manage others' plots, set costs, and admin commands
+    default: op
+  frostplots.bypass-boundary:
+    description: Walk off plot edges
+    default: false

@@ -1,0 +1,27 @@
+license:
+  key: "FrostSMP-ChangeMe"
+
+detection:
+  same-ip-concurrent: true
+
+appeal-world: world
+appeal-spawn:
+  x: 0.5
+  y: 200.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+messages:
+  kick: "<red>Alt account detected on your IP (lowest playtime). Rejoin to submit an appeal.</red>"
+  main-notify: "<yellow>An account on your IP was flagged as a possible alt. Your account is unaffected.</yellow>"
+  appeal-prompt: "<yellow>Use /appeal <reason> if this was a mistake (e.g. sibling).</yellow>"
+  appeal-submitted: "<green>Appeal submitted. Staff will review your case.</green>"
+  approved: "<green>Your appeal was approved. Welcome back.</green>"
+  denied: "<red>Your appeal was denied. You are permanently banned.</red>"
+  command-blocked: "<red>You can only use /appeal while your case is under review.</red>"
+  appeal-title: "<red>Alt Detected</red>"
+  appeal-subtitle: "<yellow>Submit /appeal <reason></yellow>"
+
+allowed-appeal-commands:
+  - appeal

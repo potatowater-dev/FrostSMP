@@ -1,0 +1,26 @@
+name: FrostAFK
+version: '${version}'
+main: com.frostsmp.afk.FrostAfkPlugin
+api-version: '1.21'
+description: AFK region with bossbar progress and FrostCrates key rewards
+authors:
+  - FrostSMP
+depend:
+  - FrostCrates
+
+commands:
+  afk:
+    description: Teleport to the AFK region after a short wait
+    usage: /afk
+  frostafk:
+    description: Manage the AFK region
+    usage: /frostafk <wand|pos1|pos2|setspawn|info|reload>
+    aliases: [fafk]
+
+permissions:
+  frostsmp.afk.use:
+    description: Use /afk to enter the AFK region
+    default: true
+  frostsmp.afk.admin:
+    description: Set AFK region and manage FrostAFK
+    default: op

@@ -1,0 +1,24 @@
+name: FrostGrapple
+version: '${version}'
+main: com.frostsmp.grapple.FrostGrapplePlugin
+api-version: '1.21'
+description: Grappling hook with configurable strength, speed, range, and cooldown
+authors:
+  - FrostSMP
+
+commands:
+  grapple:
+    description: Give a grappling hook or reload FrostGrapple
+    usage: /grapple <give|reload> [player] [amount]
+    aliases: [grapplinghook, gh, frostgrapple]
+
+permissions:
+  frostsmp.grapple.use:
+    description: Use grappling hooks
+    default: true
+  frostsmp.grapple.admin:
+    description: Give grappling hooks and reload FrostGrapple
+    default: op
+  frostsmp.grapple.nocooldown:
+    description: Ignore grappling hook cooldown
+    default: false

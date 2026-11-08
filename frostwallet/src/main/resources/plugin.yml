@@ -1,0 +1,38 @@
+name: FrostWallet
+version: '${version}'
+main: com.frostsmp.wallet.FrostWalletPlugin
+api-version: '1.21'
+description: Multi-currency wallet with item denominations
+authors:
+  - FrostSMP
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  wallet:
+    description: View wallet or deposit and withdraw
+    usage: /wallet [deposit|withdraw|reload|reset]
+    aliases: [frostwallet]
+  balance:
+    description: View wallet balances
+    usage: /balance
+    aliases: [bal]
+  deposit:
+    description: Deposit the item in your hand
+    usage: /deposit [amount]
+    aliases: [dep]
+  withdraw:
+    description: Withdraw a currency as items
+    usage: /withdraw <currency> <amount>
+    aliases: [with]
+  depositall:
+    description: Deposit all matching currency items
+    usage: /depositall [currency]
+
+permissions:
+  frostsmp.wallet.use:
+    description: Use wallet, balance, deposit, and withdraw
+    default: true
+  frostsmp.wallet.admin:
+    description: Reload FrostWallet or reset all balances
+    default: op

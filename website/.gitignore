@@ -1,0 +1,7 @@
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+functions/.store_api_key_for_server.txt
+functions/.stripe_key.tmp
+functions/.store_key.tmp

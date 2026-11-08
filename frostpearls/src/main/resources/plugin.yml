@@ -1,0 +1,23 @@
+name: FrostPearls
+version: '${version}'
+main: com.frostsmp.pearls.FrostPearlsPlugin
+api-version: '1.21'
+description: Momentum-aware straight-up ender pearl throws with wind charge pearl-catch boost
+authors:
+  - FrostSMP
+
+commands:
+  frostpearls:
+    description: FrostPearls admin commands
+    usage: /frostpearls reload
+
+permissions:
+  frostsmp.pearls.use:
+    description: Use FrostPearls straight-up pearl mechanics
+    default: true
+  frostsmp.pearls.admin:
+    description: Reload FrostPearls config
+    default: op
+  frostsmp.pearls.bypass.cooldown:
+    description: Bypass pearl throw cooldown
+    default: op
